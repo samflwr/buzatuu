@@ -1,0 +1,846 @@
+[
+  {
+    "id": "cpp-index",
+    "title": "c++ essentials",
+    "description": "introduzione completa a c++: memoria moderna, concorrenza, performance e api.",
+    "language": "cpp",
+    "level": "base → avanzato",
+    "duration": "10 ore",
+    "url": "cpp/index.html",
+    "tags": [
+      "c++",
+      "memoria",
+      "performance",
+      "raii",
+      "concorrenza"
+    ],
+    "content": "c++ è un linguaggio di sistema per software ad alte prestazioni. copre setup, memoria moderna, concorrenza e architettura."
+  },
+  {
+    "id": "cpp-01",
+    "title": "fondamenti di c++",
+    "description": "tipi base, input/output e compilazione senza errori.",
+    "language": "cpp",
+    "level": "base",
+    "duration": "20 min",
+    "url": "cpp/01-fondamenti.html",
+    "tags": [
+      "tipi",
+      "iostream",
+      "compilazione",
+      "warning"
+    ],
+    "content": "tipi primitivi, std::cout e std::cin, compilare con g++ e standard moderno."
+  },
+  {
+    "id": "cpp-02",
+    "title": "puntatori e smart pointer",
+    "description": "raw pointers, ownership e gestione sicura della memoria.",
+    "language": "cpp",
+    "level": "intermedio",
+    "duration": "25 min",
+    "url": "cpp/02-puntatori.html",
+    "tags": [
+      "puntatori",
+      "smart pointer",
+      "raii",
+      "memoria"
+    ],
+    "content": "gestione della memoria con raw pointer, unique_ptr e shared_ptr."
+  },
+  {
+    "id": "cpp-03",
+    "title": "classi e oop moderna",
+    "description": "costruttori, encapsulation e polimorfismo.",
+    "language": "cpp",
+    "level": "intermedio",
+    "duration": "30 min",
+    "url": "cpp/03-oop.html",
+    "tags": [
+      "oop",
+      "classi",
+      "polimorfismo"
+    ],
+    "content": "costruttori, metodi, ereditarietà e override in c++."
+  },
+  {
+    "id": "cpp-04",
+    "title": "stl e algoritmi",
+    "description": "vector, mappe e algoritmi per codice efficiente.",
+    "language": "cpp",
+    "level": "intermedio",
+    "duration": "25 min",
+    "url": "cpp/04-stl.html",
+    "tags": [
+      "stl",
+      "vector",
+      "map",
+      "algoritmi"
+    ],
+    "content": "container e algoritmi standard per workflow puliti."
+  },
+  {
+    "id": "cpp-05",
+    "title": "templates e generic programming",
+    "description": "template di funzione e classe, specializzazioni e best practice.",
+    "language": "cpp",
+    "level": "intermedio",
+    "duration": "35 min",
+    "url": "cpp/05-templates.html",
+    "tags": [
+      "template",
+      "generic",
+      "c++20"
+    ],
+    "content": "template per codice riusabile e veloce."
+  },
+  {
+    "id": "cpp-06",
+    "title": "build system con cmake",
+    "description": "configura progetti multi-file e dipendenze con cmake.",
+    "language": "cpp",
+    "level": "base",
+    "duration": "30 min",
+    "url": "cpp/06-cmake.html",
+    "tags": [
+      "cmake",
+      "build",
+      "workflow"
+    ],
+    "content": "cmake per build multipiattaforma e target modulari."
+  },
+  {
+    "id": "cpp-07",
+    "title": "concorrenza e thread",
+    "description": "thread, mutex, atomic e pattern per codice concorrente.",
+    "language": "cpp",
+    "level": "avanzato",
+    "duration": "45 min",
+    "url": "cpp/07-concorrenza.html",
+    "tags": [
+      "thread",
+      "mutex",
+      "atomic",
+      "concorrenza"
+    ],
+    "content": "thread pool, sincronizzazione e pattern per evitare race condition."
+  },
+  {
+    "id": "cpp-08",
+    "title": "performance e profiling",
+    "description": "profiling, ottimizzazione e allocazioni efficienti.",
+    "language": "cpp",
+    "level": "avanzato",
+    "duration": "50 min",
+    "url": "cpp/08-performance.html",
+    "tags": [
+      "performance",
+      "profiling",
+      "allocazioni"
+    ],
+    "content": "benchmark affidabili, flag di build e ottimizzazioni reali."
+  },
+  {
+    "id": "cpp-09",
+    "title": "architettura moderna",
+    "description": "design robusto con RAII, pimpl e gestione errori.",
+    "language": "cpp",
+    "level": "avanzato",
+    "duration": "55 min",
+    "url": "cpp/09-architettura.html",
+    "tags": [
+      "architettura",
+      "raii",
+      "pimpl",
+      "design"
+    ],
+    "content": "api stabili, rule of zero e separazione delle responsabilità."
+  },
+  {
+    "id": "java-index",
+    "title": "java essentials",
+    "description": "oop solida, ecosistema enterprise, concorrenza e jvm moderna.",
+    "language": "java",
+    "level": "base → intermedio",
+    "duration": "9 ore",
+    "url": "java/index.html",
+    "tags": [
+      "oop",
+      "jvm",
+      "backend",
+      "ecosistema"
+    ],
+    "content": "java offre stabilità, strumenti robusti e architetture scalabili. copre classi, tooling, concorrenza e jvm."
+  },
+  {
+    "id": "java-01",
+    "title": "struttura progetto java",
+    "description": "package, classpath, compilazione e primo progetto.",
+    "language": "java",
+    "level": "base",
+    "duration": "18 min",
+    "url": "java/01-struttura.html",
+    "tags": [
+      "package",
+      "classpath",
+      "javac",
+      "jvm"
+    ],
+    "content": "organizza src, definisci package, compila con javac e avvia la classe principale."
+  },
+  {
+    "id": "java-02",
+    "title": "collections framework",
+    "description": "liste, set, mappe e iterazioni quotidiane.",
+    "language": "java",
+    "level": "base",
+    "duration": "22 min",
+    "url": "java/02-collections.html",
+    "tags": [
+      "collections",
+      "list",
+      "set",
+      "map"
+    ],
+    "content": "usa list, set e map per gestire dati in java."
+  },
+  {
+    "id": "java-03",
+    "title": "stream api",
+    "description": "pipeline funzionali con filter, map e collect.",
+    "language": "java",
+    "level": "intermedio",
+    "duration": "20 min",
+    "url": "java/03-stream-api.html",
+    "tags": [
+      "stream",
+      "filter",
+      "map",
+      "collect"
+    ],
+    "content": "trasforma dati con stream in modo pulito."
+  },
+  {
+    "id": "java-04",
+    "title": "gestione eccezioni",
+    "description": "try/catch, custom exception e cleanup.",
+    "language": "java",
+    "level": "base",
+    "duration": "18 min",
+    "url": "java/04-eccezioni.html",
+    "tags": [
+      "errori",
+      "exception",
+      "try catch"
+    ],
+    "content": "gestisci errori con eccezioni e finalmente."
+  },
+  {
+    "id": "java-05",
+    "title": "file i/o e nio",
+    "description": "lettura e scrittura file con api moderne.",
+    "language": "java",
+    "level": "base",
+    "duration": "26 min",
+    "url": "java/05-file-io.html",
+    "tags": [
+      "nio",
+      "file",
+      "io"
+    ],
+    "content": "file handling con Files, Path e stream."
+  },
+  {
+    "id": "java-06",
+    "title": "testing con junit",
+    "description": "test unitari con junit e assert chiari.",
+    "language": "java",
+    "level": "base",
+    "duration": "24 min",
+    "url": "java/06-testing-junit.html",
+    "tags": [
+      "junit",
+      "testing",
+      "assert"
+    ],
+    "content": "setup junit e test affidabili."
+  },
+  {
+    "id": "java-07",
+    "title": "concorrenza ed executor",
+    "description": "thread pool, future e sincronizzazione.",
+    "language": "java",
+    "level": "avanzato",
+    "duration": "45 min",
+    "url": "java/07-concorrenza-executors.html",
+    "tags": [
+      "executor",
+      "future",
+      "thread",
+      "concorrenza"
+    ],
+    "content": "gestisci task paralleli con executor, future e completablefuture."
+  },
+  {
+    "id": "java-08",
+    "title": "jvm e garbage collection",
+    "description": "memoria, gc e tuning base.",
+    "language": "java",
+    "level": "avanzato",
+    "duration": "50 min",
+    "url": "java/08-jvm-gc.html",
+    "tags": [
+      "jvm",
+      "gc",
+      "memoria"
+    ],
+    "content": "heap, collector e metriche per ridurre pause."
+  },
+  {
+    "id": "java-09",
+    "title": "architettura e solid",
+    "description": "solid, design pattern e layering.",
+    "language": "java",
+    "level": "avanzato",
+    "duration": "55 min",
+    "url": "java/09-architettura-solid.html",
+    "tags": [
+      "solid",
+      "design pattern",
+      "architettura"
+    ],
+    "content": "progetta servizi manutenibili con responsabilità chiare."
+  },
+  {
+    "id": "python-index",
+    "title": "python essentials",
+    "description": "sintassi pulita, automazione, typing e pipeline dati in python.",
+    "language": "python",
+    "level": "base → intermedio",
+    "duration": "8 ore",
+    "url": "python/index.html",
+    "tags": [
+      "scripting",
+      "automazione",
+      "data",
+      "typing"
+    ],
+    "content": "python accelera lo sviluppo con sintassi chiara. copre setup, typing e pipeline dati."
+  },
+  {
+    "id": "python-01",
+    "title": "sintassi e strumenti python",
+    "description": "variabili, funzioni, moduli e pip in pratica.",
+    "language": "python",
+    "level": "base",
+    "duration": "15 min",
+    "url": "python/01-sintassi.html",
+    "tags": [
+      "variabili",
+      "funzioni",
+      "moduli",
+      "pip"
+    ],
+    "content": "gestione variabili, definizione funzioni, import moduli e uso di ambienti virtuali."
+  },
+  {
+    "id": "python-02",
+    "title": "collezioni python",
+    "description": "list, dict, set e tuple in pratica.",
+    "language": "python",
+    "level": "base",
+    "duration": "18 min",
+    "url": "python/02-collezioni.html",
+    "tags": [
+      "list",
+      "dict",
+      "set",
+      "tuple"
+    ],
+    "content": "collezioni python per dati strutturati."
+  },
+  {
+    "id": "python-03",
+    "title": "api e richieste http",
+    "description": "consuma api rest con requests e json.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "python/03-api-http.html",
+    "tags": [
+      "api",
+      "http",
+      "requests",
+      "json"
+    ],
+    "content": "richieste http, parsing json e gestione errori."
+  },
+  {
+    "id": "python-04",
+    "title": "asyncio e concorrenza",
+    "description": "async/await per task paralleli senza blocchi.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "python/04-asyncio.html",
+    "tags": [
+      "async",
+      "await",
+      "concorrenza"
+    ],
+    "content": "esegui task in parallelo con asyncio."
+  },
+  {
+    "id": "python-05",
+    "title": "oop in python",
+    "description": "classi, dataclass e composizione in python.",
+    "language": "python",
+    "level": "base",
+    "duration": "26 min",
+    "url": "python/05-oop.html",
+    "tags": [
+      "oop",
+      "dataclass",
+      "classi"
+    ],
+    "content": "oop pulita con dataclass e typing."
+  },
+  {
+    "id": "python-06",
+    "title": "testing con pytest",
+    "description": "test, fixture e coverage in modo semplice.",
+    "language": "python",
+    "level": "base",
+    "duration": "22 min",
+    "url": "python/06-testing-pytest.html",
+    "tags": [
+      "pytest",
+      "testing",
+      "fixture"
+    ],
+    "content": "test automatizzati con pytest."
+  },
+  {
+    "id": "python-07",
+    "title": "typing avanzato",
+    "description": "type hints, dataclass e protocolli.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "40 min",
+    "url": "python/07-typing.html",
+    "tags": [
+      "typing",
+      "protocol",
+      "dataclass"
+    ],
+    "content": "type hints completi per api chiare e affidabili."
+  },
+  {
+    "id": "python-08",
+    "title": "cli e packaging",
+    "description": "pyproject, argparse e distribuzione tool.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "50 min",
+    "url": "python/08-cli-packaging.html",
+    "tags": [
+      "cli",
+      "packaging",
+      "argparse"
+    ],
+    "content": "tooling e release per script riusabili."
+  },
+  {
+    "id": "python-09",
+    "title": "data pipeline",
+    "description": "csv, json e sqlite per pipeline dati leggere.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "55 min",
+    "url": "python/09-data-pipeline.html",
+    "tags": [
+      "data",
+      "sqlite",
+      "pipeline"
+    ],
+    "content": "pipeline ripetibili con parsing, normalizzazione e storage."
+  },
+  {
+    "id": "sql-index",
+    "title": "sql essentials",
+    "description": "query, join, window functions e sicurezza per database moderni.",
+    "language": "sql",
+    "level": "base → intermedio",
+    "duration": "7 ore",
+    "url": "sql/index.html",
+    "tags": [
+      "query",
+      "join",
+      "schema",
+      "window"
+    ],
+    "content": "sql è la base per i dati relazionali. include query, join, performance e sicurezza."
+  },
+  {
+    "id": "sql-01",
+    "title": "query base sql",
+    "description": "select, where, order by, limit con esempi.",
+    "language": "sql",
+    "level": "base",
+    "duration": "12 min",
+    "url": "sql/01-query-base.html",
+    "tags": [
+      "select",
+      "where",
+      "order by",
+      "limit"
+    ],
+    "content": "costruisci query pulite con filtri e ordinamenti."
+  },
+  {
+    "id": "sql-02",
+    "title": "join avanzati",
+    "description": "left, right join e aggregazioni.",
+    "language": "sql",
+    "level": "base",
+    "duration": "15 min",
+    "url": "sql/02-join-avanzati.html",
+    "tags": [
+      "join",
+      "left join",
+      "right join"
+    ],
+    "content": "join avanzati per dataset completi."
+  },
+  {
+    "id": "sql-03",
+    "title": "aggregazioni e group by",
+    "description": "count, sum, avg e having.",
+    "language": "sql",
+    "level": "base",
+    "duration": "14 min",
+    "url": "sql/03-aggregazioni.html",
+    "tags": [
+      "group by",
+      "having",
+      "count"
+    ],
+    "content": "calcola metriche con aggregazioni."
+  },
+  {
+    "id": "sql-04",
+    "title": "indici e performance",
+    "description": "create index, explain e ottimizzazione.",
+    "language": "sql",
+    "level": "intermedio",
+    "duration": "16 min",
+    "url": "sql/04-indici-performance.html",
+    "tags": [
+      "index",
+      "performance",
+      "explain"
+    ],
+    "content": "ottimizza query con indici e analisi."
+  },
+  {
+    "id": "sql-05",
+    "title": "transazioni e isolamento",
+    "description": "commit, rollback e consistenza dei dati.",
+    "language": "sql",
+    "level": "intermedio",
+    "duration": "20 min",
+    "url": "sql/05-transazioni.html",
+    "tags": [
+      "transaction",
+      "rollback",
+      "isolation"
+    ],
+    "content": "gestione transazioni e consistenza."
+  },
+  {
+    "id": "sql-06",
+    "title": "design di schema",
+    "description": "entità, relazioni e normalizzazione.",
+    "language": "sql",
+    "level": "base",
+    "duration": "28 min",
+    "url": "sql/06-schema-design.html",
+    "tags": [
+      "schema",
+      "normalizzazione",
+      "relazioni"
+    ],
+    "content": "modella database robusti."
+  },
+  {
+    "id": "sql-07",
+    "title": "window functions",
+    "description": "over, partition e funzioni analitiche.",
+    "language": "sql",
+    "level": "intermedio",
+    "duration": "40 min",
+    "url": "sql/07-window-functions.html",
+    "tags": [
+      "window",
+      "partition",
+      "over"
+    ],
+    "content": "ranking e aggregazioni senza perdere righe."
+  },
+  {
+    "id": "sql-08",
+    "title": "cte e subquery",
+    "description": "cte, subquery e query ricorsive.",
+    "language": "sql",
+    "level": "intermedio",
+    "duration": "45 min",
+    "url": "sql/08-cte-subquery.html",
+    "tags": [
+      "cte",
+      "subquery",
+      "recursive"
+    ],
+    "content": "query modulari e leggibili con cte."
+  },
+  {
+    "id": "sql-09",
+    "title": "sicurezza e ruoli",
+    "description": "ruoli, permessi e least privilege.",
+    "language": "sql",
+    "level": "intermedio",
+    "duration": "35 min",
+    "url": "sql/09-security-ruoli.html",
+    "tags": [
+      "security",
+      "ruoli",
+      "permessi"
+    ],
+    "content": "policy sicure e auditing per database."
+  },
+  {
+    "id": "cpp-07b",
+    "title": "memoria moderna in c++",
+    "description": "smart pointer, move semantics e gestione risorse senza leak.",
+    "language": "cpp",
+    "level": "intermedio",
+    "duration": "35 min",
+    "url": "cpp/07-memoria-moderna.html",
+    "tags": [
+      "smart pointer",
+      "raii",
+      "move",
+      "ownership"
+    ],
+    "content": "smart pointer e move semantics per ownership sicura."
+  },
+  {
+    "id": "cpp-08b",
+    "title": "concorrenza e multithreading",
+    "description": "thread, mutex e async per task paralleli.",
+    "language": "cpp",
+    "level": "avanzato",
+    "duration": "40 min",
+    "url": "cpp/08-concorrenza.html",
+    "tags": [
+      "thread",
+      "mutex",
+      "async"
+    ],
+    "content": "sincronizzazione e multithreading per workload complessi."
+  },
+  {
+    "id": "cpp-09b",
+    "title": "performance e profiling avanzato",
+    "description": "profiling, cache e ottimizzazione avanzata.",
+    "language": "cpp",
+    "level": "avanzato",
+    "duration": "45 min",
+    "url": "cpp/09-performance.html",
+    "tags": [
+      "performance",
+      "profiling",
+      "cache"
+    ],
+    "content": "ottimizza con profiling e strategie di cache."
+  },
+  {
+    "id": "cpp-10",
+    "title": "design di api e pattern moderni",
+    "description": "interfacce, pimpl e pattern moderni.",
+    "language": "cpp",
+    "level": "avanzato",
+    "duration": "45 min",
+    "url": "cpp/10-architetture-api.html",
+    "tags": [
+      "api",
+      "pattern",
+      "pimpl"
+    ],
+    "content": "design di api robuste con pattern moderni."
+  },
+  {
+    "id": "java-07b",
+    "title": "generics avanzati in java",
+    "description": "bounded type, wildcard e type safety.",
+    "language": "java",
+    "level": "intermedio",
+    "duration": "35 min",
+    "url": "java/07-generics-avanzati.html",
+    "tags": [
+      "generics",
+      "wildcard",
+      "type bounds"
+    ],
+    "content": "generics avanzati per api type-safe."
+  },
+  {
+    "id": "java-08b",
+    "title": "concorrenza e executor",
+    "description": "thread pool e sincronizzazione avanzata.",
+    "language": "java",
+    "level": "avanzato",
+    "duration": "40 min",
+    "url": "java/08-concorrenza.html",
+    "tags": [
+      "executor",
+      "thread",
+      "concorrenza"
+    ],
+    "content": "pattern avanzati per task paralleli in java."
+  },
+  {
+    "id": "java-09b",
+    "title": "api rest con spring boot",
+    "description": "controller, service e repository per api.",
+    "language": "java",
+    "level": "intermedio",
+    "duration": "45 min",
+    "url": "java/09-rest-api.html",
+    "tags": [
+      "spring boot",
+      "rest",
+      "api"
+    ],
+    "content": "costruisci api rest con spring boot."
+  },
+  {
+    "id": "java-10",
+    "title": "performance e memoria jvm",
+    "description": "tuning, profiling e garbage collection.",
+    "language": "java",
+    "level": "avanzato",
+    "duration": "45 min",
+    "url": "java/10-jvm-performance.html",
+    "tags": [
+      "jvm",
+      "performance",
+      "gc"
+    ],
+    "content": "monitoraggio e tuning della jvm."
+  },
+  {
+    "id": "python-07b",
+    "title": "dataclass e modellazione",
+    "description": "dataclass, typing e modelli puliti.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "35 min",
+    "url": "python/07-dataclass.html",
+    "tags": [
+      "dataclass",
+      "typing",
+      "model"
+    ],
+    "content": "modellazione dati con dataclass e typing."
+  },
+  {
+    "id": "python-08b",
+    "title": "logging e osservabilità",
+    "description": "log strutturati, handler e formati.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "35 min",
+    "url": "python/08-logging.html",
+    "tags": [
+      "logging",
+      "observability",
+      "handler"
+    ],
+    "content": "logging robusto per servizi python."
+  },
+  {
+    "id": "python-09b",
+    "title": "cli tools e automazione",
+    "description": "argparse e automazione task.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "40 min",
+    "url": "python/09-cli-tools.html",
+    "tags": [
+      "cli",
+      "automation",
+      "argparse"
+    ],
+    "content": "costruisci cli tools per workflow veloci."
+  },
+  {
+    "id": "python-10",
+    "title": "packaging e distribuzione",
+    "description": "pyproject, release e versioning.",
+    "language": "python",
+    "level": "intermedio",
+    "duration": "40 min",
+    "url": "python/10-packaging.html",
+    "tags": [
+      "packaging",
+      "release",
+      "pyproject"
+    ],
+    "content": "distribuisci librerie e tool python."
+  },
+  {
+    "id": "sql-08b",
+    "title": "cte e query ricorsive",
+    "description": "recursive cte per gerarchie.",
+    "language": "sql",
+    "level": "intermedio",
+    "duration": "35 min",
+    "url": "sql/08-cte-recursive.html",
+    "tags": [
+      "cte",
+      "recursive",
+      "hierarchy"
+    ],
+    "content": "query ricorsive per strutture ad albero."
+  },
+  {
+    "id": "sql-09b",
+    "title": "views e materialized views",
+    "description": "views per riuso e performance.",
+    "language": "sql",
+    "level": "intermedio",
+    "duration": "30 min",
+    "url": "sql/09-views.html",
+    "tags": [
+      "views",
+      "materialized",
+      "performance"
+    ],
+    "content": "usa views per semplificare query e caching."
+  },
+  {
+    "id": "sql-10",
+    "title": "sicurezza e ruoli",
+    "description": "ruoli avanzati e auditing.",
+    "language": "sql",
+    "level": "intermedio",
+    "duration": "35 min",
+    "url": "sql/10-security-roles.html",
+    "tags": [
+      "security",
+      "ruoli",
+      "auditing"
+    ],
+    "content": "gestione ruoli avanzata e audit log."
+  }
+]

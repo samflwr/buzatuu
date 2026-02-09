@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>buzatu — java generics avanzati</title>
+    <meta name="description" content="bounded types, wildcards e api tipizzate robuste." />
+    <meta name="keywords" content="buzatu, samir buzatu, tutorial, programmazione, ai, cinema, fotografia, java" />
+    <meta name="author" content="samir buzatu" />
+    <meta name="publisher" content="buzatu" />
+    <meta name="application-name" content="buzatu" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:site_name" content="buzatu" />
+    <meta property="og:title" content="buzatu — generics avanzati in java" />
+    <meta property="og:description" content="bounded types, wildcards e api tipizzate robuste." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://buzatu.it/tutorials/java/07-generics-avanzati.html" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="buzatu — generics avanzati in java" />
+        <meta property="og:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta name="twitter:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:description" content="bounded types, wildcards e api tipizzate robuste." />
+    <link rel="canonical" href="https://buzatu.it/tutorials/java/07-generics-avanzati.html" />
+    <link rel="icon" type="image/svg+xml" href="https://buzatu.it/assets/favicon.svg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://buzatu.it/sitemap.xml" />
+    <link rel="alternate" hreflang="it" href="https://buzatu.it/tutorials/java/07-generics-avanzati.html" />
+    <link rel="alternate" hreflang="x-default" href="https://buzatu.it/tutorials/java/07-generics-avanzati.html" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "email": "studio@buzatu.it", "address": {"@type": "PostalAddress", "addressLocality": "catania", "addressCountry": "it"}, "founder": {"@type": "Person", "name": "samir buzatu"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "potentialAction": {"@type": "SearchAction", "target": "https://buzatu.it/tutorials/index.html?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "buzatu — generics avanzati in java", "description": "bounded types, wildcards e api tipizzate robuste.", "url": "https://buzatu.it/tutorials/java/07-generics-avanzati.html", "isPartOf": {"@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it"}, "inLanguage": "it"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "generics avanzati in java", "description": "bounded types, wildcards e api tipizzate robuste.", "url": "https://buzatu.it/tutorials/java/07-generics-avanzati.html", "learningResourceType": "tutorial", "educationalLevel": "intermedio", "inLanguage": "it", "creator": {"@type": "Person", "name": "samir buzatu"}, "about": ["generics", "wildcards", "type safety", "api"], "keywords": "generics, wildcards, type safety", "educationalUse": "tutorial", "timeRequired": "PT32M", "isPartOf": {"@type": "CollectionPage", "name": "tutorial java", "url": "https://buzatu.it/tutorials/java/index.html"}}</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "home", "item": "https://buzatu.it/"}, {"@type": "ListItem", "position": 2, "name": "tutorials", "item": "https://buzatu.it/tutorials/"}, {"@type": "ListItem", "position": 3, "name": "java", "item": "https://buzatu.it/tutorials/java/index.html"}, {"@type": "ListItem", "position": 4, "name": "generics avanzati in java", "item": "https://buzatu.it/tutorials/java/07-generics-avanzati.html"}]}</script>
+
+</head>
+  <body>
+    <a class="skip-link" href="#main-content">skip to content</a>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <p class="preloader-title">buzatu systems initializing</p>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-meta">
+          <span class="preloader-count" aria-live="polite">0%</span>
+          <span class="preloader-status">calibrating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="transition-layer" aria-hidden="true"></div>
+    <div class="ambient"></div>
+    <div class="scroll-progress"><span></span></div>
+
+    <div data-barba="wrapper">
+      <header class="site-header">
+        <a class="brand" href="../../index.html" aria-label="buzatu home">
+          <span class="brand-mark">b</span>
+          <span class="brand-word">buzatu</span>
+        </a>
+        <nav class="site-nav" aria-label="primary">
+          <a class="nav-link" href="../../index.html" data-nav="home">home</a>
+          <a class="nav-link" href="../../work.html" data-nav="work">work</a>
+          <a class="nav-link" href="../../photography.html" data-nav="photography">photography</a>
+          <a class="nav-link" href="../index.html" data-nav="tutorials">tutorials</a>
+          <a class="nav-link" href="../../about.html" data-nav="about">about</a>
+        </nav>
+        <div class="nav-controls">
+          <span class="status-pill">availability: limited select briefs</span>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+          <div class="nav-overlay-top">
+            <p class="nav-overlay-label">menu</p>
+            <button class="nav-close" type="button">close</button>
+          </div>
+          <nav class="nav-overlay-links">
+            <a href="../../index.html" data-nav="home">home</a>
+            <a href="../../work.html" data-nav="work">work</a>
+            <a href="../../photography.html" data-nav="photography">photography</a>
+            <a href="../index.html" data-nav="tutorials">tutorials</a>
+            <a href="../../about.html" data-nav="about">about</a>
+          </nav>
+          <div class="nav-overlay-footer">
+            <p class="nav-overlay-text">studio@buzatu.it</p>
+            <div class="nav-overlay-meta">
+              <span>catania, italy</span>
+              <span>cinematic systems · ai · vfx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main data-barba="container" data-barba-namespace="java-07-generics-avanzati" class="page" id="main-content">
+        <section class="page-hero tutorial-hero">
+          <nav class="breadcrumbs" data-animate="reveal">
+            <a href="../index.html">tutorials</a>
+            <a href="index.html">java</a>
+            <span>generics avanzati</span>
+          </nav>
+          <p class="eyebrow" data-animate="reveal">lezione 07</p>
+          <h1 class="page-title" data-animate="reveal">generics avanzati in java</h1>
+          <p class="page-sub" data-animate="reveal">wildcards, bounded types e design di api sicure.</p>
+          <div class="tutorial-tags" data-animate="reveal">
+            <span class="tag">livello: intermedio</span>
+            <span class="tag">durata: 32 min</span>
+            <span class="tag">output: api type-safe</span>
+            <span class="tag">badge: generics pro</span>
+</div>
+        </section>
+
+        <section class="tutorial-layout">
+          <aside class="tutorial-aside" data-animate="reveal">
+            <h3>indice</h3>
+            <ul class="toc">
+              <li><a href="#overview">overview</a></li>
+              <li><a href="#bounded">bounded types</a></li>
+              <li><a href="#wildcards">wildcards</a></li>
+              <li><a href="#api">design api</a></li>
+              <li><a href="#exercises">esercizi</a></li>
+              <li><a href="#checklist">checklist</a></li>
+              <li><a href="#panoramica">panoramica</a></li>
+              <li><a href="#obiettivi">obiettivi</a></li>
+              <li><a href="#scheda-rapida">scheda rapida</a></li>
+              <li><a href="#tips">tips</a></li>
+              <li><a href="#mini-progetto">mini progetto</a></li>
+            </ul>
+          </aside>
+
+          <article class="tutorial-article">
+            <section id="overview" data-animate="reveal">
+  <h2>overview</h2>
+  <p>i generics riducono cast e bug. con bound e wildcard puoi controllare la variabilità delle api.</p>
+  <div class="callout"><p>regola base: producer extends, consumer super.</p></div>
+</section>
+
+<section id="bounded" data-animate="reveal">
+  <h2>bounded types</h2>
+  <p>usa <code>&lt;T extends Number&gt;</code> per limitare i tipi accettati.</p>
+  <pre class="code-block"><code class="language-java">class stats&lt;T extends Number&gt; {
+    double avg(List&lt;T&gt; values) {
+        double sum = 0;
+        for (T v : values) sum += v.doubleValue();
+        return sum / values.size();
+    }
+}</code></pre>
+</section>
+
+<section id="wildcards" data-animate="reveal">
+  <h2>wildcards</h2>
+  <p>le wildcard modellano variabilità. <code>? extends</code> per leggere, <code>? super</code> per scrivere.</p>
+  <pre class="code-block"><code class="language-java">void copy(List&lt;? extends Number&gt; src, List&lt;? super Number&gt; dst) {
+    for (Number n : src) dst.add(n);
+}</code></pre>
+</section>
+
+<section id="api" data-animate="reveal">
+  <h2>design api</h2>
+  <p>mantieni le signature semplici. evita l'overuse di wildcard se non serve.</p>
+  <ul class="bullet-list"><li>preferisci factory method</li><li>evita raw types</li><li>documenta i bound</li></ul>
+</section>
+
+<section id="exercises" data-animate="reveal">
+  <h2>esercizi</h2>
+  <p>crea una classe <code>repository&lt;T&gt;</code> con metodi <code>find</code> e <code>save</code>.</p>
+  <p>riscrivi un metodo che usa <code>Object</code> usando generics e bound.</p>
+</section>
+
+<section id="checklist" data-animate="reveal">
+  <h2>checklist</h2>
+  <ul class="bullet-list"><li>usa bound per vincolare i tipi</li><li>applica pe/ce per le wildcard</li><li>evita raw types</li><li>scrivi test su casi limite</li></ul>
+</section>
+          
+            <section id="panoramica" data-animate="reveal">
+              <h2>panoramica</h2>
+              <p>In questo capitolo su generics avanzati in java, wildcards, bounded types e design di api sicure. L'obiettivo è trasformare i concetti in micro-pattern riutilizzabili con esempi piccoli e verificabili.</p>
+              <p>Lavora in sequenza: leggi, prova, modifica gli snippet e annota i trade-off principali (performance, leggibilità, manutenzione).</p>
+              <div class="callout">
+                <p>badge: generics pro</p>
+              </div>
+            </section>
+
+            <section id="obiettivi" data-animate="reveal">
+              <h2>obiettivi</h2>
+              <ul class="bullet-list">
+                <li>capire e applicare overview in uno scenario reale</li>
+                <li>capire e applicare bounded types in uno scenario reale</li>
+                <li>capire e applicare wildcards in uno scenario reale</li>
+                <li>capire e applicare design api in uno scenario reale</li>
+              </ul>
+            </section>
+
+            <section id="scheda-rapida" data-animate="reveal">
+              <h2>scheda rapida</h2>
+              <pre class="code-block"><code class="language-java">import java.util.List;
+
+public class Main {
+  public static void main(String[] args) {
+    var dati = List.of(1, 2, 3);
+    var out = dati.stream().map(x -&gt; x * 2).toList();
+    System.out.println(out);
+  }
+}</code></pre>
+              <p>Adatta questo scheletro agli esempi della lezione e sostituisci i dati con il tuo dominio.</p>
+            </section>
+
+            <section id="tips" data-animate="reveal">
+              <h2>tips</h2>
+              <ul class="bullet-list">
+                <li>organizza package per dominio</li>
+                <li>preferisci immutabilità dove possibile</li>
+                <li>documenta le API pubbliche</li>
+                <li>usa ? extends per lettura</li>
+                <li>usa ? super per scrittura</li>
+                <li>limita T con extends</li>
+              </ul>
+              <div class="callout">
+                <p>tip: Generics servono per sicurezza: se complica il codice, riduci.</p>
+              </div>
+            </section>
+
+            <section id="mini-progetto" data-animate="reveal">
+              <h2>mini progetto</h2>
+              <p>Repository generico con vincoli.</p>
+              <ul class="bullet-list">
+                <li>definisci Repository<T></li>
+                <li>aggiungi T extends Entity</li>
+                <li>implementa findById</li>
+                <li>usa in due classi</li>
+              </ul>
+              <p>output atteso: uno script o query ripetibile con risultati verificabili.</p>
+            </section>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">buzatu</span>
+            <p class="footer-copy">cinematic systems studio blending ai, film, and art practice.</p>
+            <div class="footer-badges">
+              <span>ai</span>
+              <span>vfx</span>
+              <span>photography</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>navigate</h4>
+            <a href="../../index.html">home</a>
+            <a href="../../work.html">work</a>
+            <a href="../../photography.html">photography</a>
+            <a href="../index.html">tutorials</a>
+            <a href="../../about.html">about</a>
+          </div>
+          <div class="footer-col">
+            <h4>studio</h4>
+            <p>catania, italy</p>
+            <p>utc +1</p>
+            <p>studio@buzatu.it</p>
+          </div>
+          <div class="footer-col">
+            <h4>signals</h4>
+            <p>subscribe for new drops and private previews.</p>
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="email" required />
+              <button type="submit">join</button>
+            </form>
+            <div class="footer-social">
+              <a href="#">instagram</a>
+              <a href="#">vimeo</a>
+              <a href="#">behance</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 buzatu</span>
+          <span>crafted in catania · cinematic dark mode</span>
+        </div>
+      </footer>
+    </div>
+
+    <a class="floating-cta" href="mailto:studio@buzatu.it">start a brief</a>
+    <button class="scroll-top" type="button">top</button>
+    <div class="toast" aria-live="polite"></div>
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button">close</button>
+      <img class="lightbox-image" alt="expanded photograph" />
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

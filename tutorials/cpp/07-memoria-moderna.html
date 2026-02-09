@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>buzatu — c++ memoria moderna</title>
+    <meta name="description" content="smart pointer, move semantics e gestione risorse senza leak." />
+    <meta name="keywords" content="buzatu, samir buzatu, tutorial, programmazione, ai, cinema, fotografia, c++" />
+    <meta name="author" content="samir buzatu" />
+    <meta name="publisher" content="buzatu" />
+    <meta name="application-name" content="buzatu" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:site_name" content="buzatu" />
+    <meta property="og:title" content="buzatu — memoria moderna in c++" />
+    <meta property="og:description" content="smart pointer, move semantics e gestione risorse senza leak." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://buzatu.it/tutorials/cpp/07-memoria-moderna.html" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="buzatu — memoria moderna in c++" />
+        <meta property="og:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta name="twitter:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:description" content="smart pointer, move semantics e gestione risorse senza leak." />
+    <link rel="canonical" href="https://buzatu.it/tutorials/cpp/07-memoria-moderna.html" />
+    <link rel="icon" type="image/svg+xml" href="https://buzatu.it/assets/favicon.svg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://buzatu.it/sitemap.xml" />
+    <link rel="alternate" hreflang="it" href="https://buzatu.it/tutorials/cpp/07-memoria-moderna.html" />
+    <link rel="alternate" hreflang="x-default" href="https://buzatu.it/tutorials/cpp/07-memoria-moderna.html" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "email": "studio@buzatu.it", "address": {"@type": "PostalAddress", "addressLocality": "catania", "addressCountry": "it"}, "founder": {"@type": "Person", "name": "samir buzatu"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "potentialAction": {"@type": "SearchAction", "target": "https://buzatu.it/tutorials/index.html?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "buzatu — memoria moderna in c++", "description": "smart pointer, move semantics e gestione risorse senza leak.", "url": "https://buzatu.it/tutorials/cpp/07-memoria-moderna.html", "isPartOf": {"@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it"}, "inLanguage": "it"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "memoria moderna in c++", "description": "smart pointer, move semantics e gestione risorse senza leak.", "url": "https://buzatu.it/tutorials/cpp/07-memoria-moderna.html", "learningResourceType": "tutorial", "educationalLevel": "intermedio", "inLanguage": "it", "creator": {"@type": "Person", "name": "samir buzatu"}, "about": ["smart pointer", "raii", "move semantics", "ownership"], "keywords": "smart pointer, raii, ownership, move", "educationalUse": "tutorial", "timeRequired": "PT35M", "isPartOf": {"@type": "CollectionPage", "name": "tutorial cpp", "url": "https://buzatu.it/tutorials/cpp/index.html"}}</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "home", "item": "https://buzatu.it/"}, {"@type": "ListItem", "position": 2, "name": "tutorials", "item": "https://buzatu.it/tutorials/"}, {"@type": "ListItem", "position": 3, "name": "cpp", "item": "https://buzatu.it/tutorials/cpp/index.html"}, {"@type": "ListItem", "position": 4, "name": "memoria moderna in c++", "item": "https://buzatu.it/tutorials/cpp/07-memoria-moderna.html"}]}</script>
+
+</head>
+  <body>
+    <a class="skip-link" href="#main-content">skip to content</a>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <p class="preloader-title">buzatu systems initializing</p>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-meta">
+          <span class="preloader-count" aria-live="polite">0%</span>
+          <span class="preloader-status">calibrating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="transition-layer" aria-hidden="true"></div>
+    <div class="ambient"></div>
+    <div class="scroll-progress"><span></span></div>
+
+    <div data-barba="wrapper">
+      <header class="site-header">
+        <a class="brand" href="../../index.html" aria-label="buzatu home">
+          <span class="brand-mark">b</span>
+          <span class="brand-word">buzatu</span>
+        </a>
+        <nav class="site-nav" aria-label="primary">
+          <a class="nav-link" href="../../index.html" data-nav="home">home</a>
+          <a class="nav-link" href="../../work.html" data-nav="work">work</a>
+          <a class="nav-link" href="../../photography.html" data-nav="photography">photography</a>
+          <a class="nav-link" href="../index.html" data-nav="tutorials">tutorials</a>
+          <a class="nav-link" href="../../about.html" data-nav="about">about</a>
+        </nav>
+        <div class="nav-controls">
+          <span class="status-pill">availability: limited select briefs</span>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+          <div class="nav-overlay-top">
+            <p class="nav-overlay-label">menu</p>
+            <button class="nav-close" type="button">close</button>
+          </div>
+          <nav class="nav-overlay-links">
+            <a href="../../index.html" data-nav="home">home</a>
+            <a href="../../work.html" data-nav="work">work</a>
+            <a href="../../photography.html" data-nav="photography">photography</a>
+            <a href="../index.html" data-nav="tutorials">tutorials</a>
+            <a href="../../about.html" data-nav="about">about</a>
+          </nav>
+          <div class="nav-overlay-footer">
+            <p class="nav-overlay-text">studio@buzatu.it</p>
+            <div class="nav-overlay-meta">
+              <span>catania, italy</span>
+              <span>cinematic systems · ai · vfx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main data-barba="container" data-barba-namespace="cpp-07-memoria-moderna" class="page" id="main-content">
+        <section class="page-hero tutorial-hero">
+          <nav class="breadcrumbs" data-animate="reveal">
+            <a href="../index.html">tutorials</a>
+            <a href="index.html">c++</a>
+            <span>memoria moderna</span>
+          </nav>
+          <p class="eyebrow" data-animate="reveal">lezione 07</p>
+          <h1 class="page-title" data-animate="reveal">memoria moderna in c++</h1>
+          <p class="page-sub" data-animate="reveal">smart pointer, move semantics, ownership e pattern raii.</p>
+          <div class="tutorial-tags" data-animate="reveal">
+            <span class="tag">livello: intermedio</span>
+            <span class="tag">durata: 35 min</span>
+            <span class="tag">output: moduli memory-safe</span>
+            <span class="tag">badge: modern memory</span>
+</div>
+        </section>
+
+        <section class="tutorial-layout">
+          <aside class="tutorial-aside" data-animate="reveal">
+            <h3>indice</h3>
+            <ul class="toc">
+              <li><a href="#overview">panoramica</a></li>
+              <li><a href="#unique">unique_ptr</a></li>
+              <li><a href="#shared">shared_ptr</a></li>
+              <li><a href="#move">move semantics</a></li>
+              <li><a href="#errors">errori comuni</a></li>
+              <li><a href="#exercises">esercizi</a></li>
+              <li><a href="#checklist">checklist</a></li>
+              <li><a href="#panoramica">panoramica</a></li>
+              <li><a href="#obiettivi">obiettivi</a></li>
+              <li><a href="#scheda-rapida">scheda rapida</a></li>
+              <li><a href="#tips">tips</a></li>
+              <li><a href="#mini-progetto">mini progetto</a></li>
+            </ul>
+          </aside>
+
+          <article class="tutorial-article">
+            <section id="overview" data-animate="reveal">
+  <h2>panoramica</h2>
+  <p>la memoria moderna in c++ punta a eliminare leak e dangling pointer usando ownership esplicita e risorse a durata controllata.</p>
+  <div class="callout"><p>principio base: ogni risorsa ha un owner chiaro. quando l'owner esce dallo scope, la risorsa si libera.</p></div>
+</section>
+
+<section id="unique" data-animate="reveal">
+  <h2>unique_ptr e ownership</h2>
+  <p>usa <code>std::unique_ptr</code> per esprimere ownership esclusiva. è leggero e perfetto per risorse non condivise.</p>
+  <pre class="code-block"><code class="language-cpp">#include &lt;memory&gt;
+
+struct asset {
+    int id;
+    explicit asset(int value) : id(value) {}
+};
+
+std::unique_ptr&lt;asset&gt; make_asset() {
+    return std::make_unique&lt;asset&gt;(42);
+}
+
+int main() {
+    auto a = make_asset();
+    // a possiede la risorsa
+    return 0;
+}</code></pre>
+  <p>non copiare un unique_ptr: spostalo con <code>std::move</code>.</p>
+</section>
+
+<section id="shared" data-animate="reveal">
+  <h2>shared_ptr e weak_ptr</h2>
+  <p><code>std::shared_ptr</code> serve quando l'ownership è condivisa. usa <code>std::weak_ptr</code> per evitare cicli.</p>
+  <pre class="code-block"><code class="language-cpp">#include &lt;memory&gt;
+#include &lt;vector&gt;
+
+struct node {
+    int value;
+    std::vector&lt;std::shared_ptr&lt;node&gt;&gt; children;
+    std::weak_ptr&lt;node&gt; parent;
+};</code></pre>
+  <div class="callout"><p>non usare shared_ptr ovunque: aggiunge overhead. preferisci unique_ptr se puoi.</p></div>
+</section>
+
+<section id="move" data-animate="reveal">
+  <h2>move semantics</h2>
+  <p>lo spostamento evita copie costose. implementa costruttore e assegnazione move quando gestisci risorse.</p>
+  <pre class="code-block"><code class="language-cpp">struct buffer {
+    std::unique_ptr&lt;int[]&gt; data;
+    size_t size;
+    buffer(size_t n) : data(new int[n]), size(n) {}
+    buffer(buffer&amp;&amp; other) noexcept : data(std::move(other.data)), size(other.size) {
+        other.size = 0;
+    }
+};</code></pre>
+</section>
+
+<section id="errors" data-animate="reveal">
+  <h2>errori comuni</h2>
+  <ul class="bullet-list"><li>usare <code>new</code> senza <code>delete</code></li><li>creare cicli con <code>shared_ptr</code></li><li>spostare un oggetto e continuare a usarlo</li><li>dimenticare <code>noexcept</code> nei move</li></ul>
+</section>
+
+<section id="exercises" data-animate="reveal">
+  <h2>esercizi</h2>
+  <p>riscrivi una classe che usa <code>new</code>/<code>delete</code> usando <code>unique_ptr</code>.</p>
+  <p>crea una struttura ad albero con <code>shared_ptr</code> e <code>weak_ptr</code> per il parent.</p>
+</section>
+
+<section id="checklist" data-animate="reveal">
+  <h2>checklist</h2>
+  <ul class="bullet-list"><li>usa unique_ptr come default</li><li>shared_ptr solo dove necessario</li><li>move semantics per risorse pesanti</li><li>scrivi test per casi limite</li></ul>
+</section>
+          
+            <section id="panoramica" data-animate="reveal">
+              <h2>panoramica</h2>
+              <p>In questo capitolo su memoria moderna in c++, smart pointer, move semantics, ownership e pattern raii. L'obiettivo è trasformare i concetti in micro-pattern riutilizzabili con esempi piccoli e verificabili.</p>
+              <p>Lavora in sequenza: leggi, prova, modifica gli snippet e annota i trade-off principali (performance, leggibilità, manutenzione).</p>
+              <div class="callout">
+                <p>badge: modern memory</p>
+              </div>
+            </section>
+
+            <section id="obiettivi" data-animate="reveal">
+              <h2>obiettivi</h2>
+              <ul class="bullet-list">
+                <li>capire e applicare panoramica in uno scenario reale</li>
+                <li>capire e applicare unique_ptr in uno scenario reale</li>
+                <li>capire e applicare shared_ptr in uno scenario reale</li>
+                <li>capire e applicare move semantics in uno scenario reale</li>
+              </ul>
+            </section>
+
+            <section id="scheda-rapida" data-animate="reveal">
+              <h2>scheda rapida</h2>
+              <pre class="code-block"><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main() {
+  std::vector&lt;int&gt; dati{1, 2, 3};
+  for (auto &v : dati) {
+    v *= 2;
+  }
+  for (const auto &v : dati) {
+    std::cout &lt;&lt; v &lt;&lt; " ";
+  }
+  std::cout &lt;&lt; "\n";
+  return 0;
+}</code></pre>
+              <p>Adatta questo scheletro agli esempi della lezione e sostituisci i dati con il tuo dominio.</p>
+            </section>
+
+            <section id="tips" data-animate="reveal">
+              <h2>tips</h2>
+              <ul class="bullet-list">
+                <li>compila con warning elevati</li>
+                <li>preferisci RAII</li>
+                <li>usa const ovunque possibile</li>
+                <li>usa unique_ptr per ownership</li>
+                <li>shared_ptr solo se necessario</li>
+                <li>evita new/delete</li>
+              </ul>
+              <div class="callout">
+                <p>tip: Ogni new dovrebbe avere una buona ragione.</p>
+              </div>
+            </section>
+
+            <section id="mini-progetto" data-animate="reveal">
+              <h2>mini progetto</h2>
+              <p>Gestisci oggetti con smart pointer.</p>
+              <ul class="bullet-list">
+                <li>crea factory con make_unique</li>
+                <li>passa ownership</li>
+                <li>usa shared_ptr per condividere</li>
+                <li>verifica lifetime</li>
+              </ul>
+              <p>output atteso: uno script o query ripetibile con risultati verificabili.</p>
+            </section>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">buzatu</span>
+            <p class="footer-copy">cinematic systems studio blending ai, film, and art practice.</p>
+            <div class="footer-badges">
+              <span>ai</span>
+              <span>vfx</span>
+              <span>photography</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>navigate</h4>
+            <a href="../../index.html">home</a>
+            <a href="../../work.html">work</a>
+            <a href="../../photography.html">photography</a>
+            <a href="../index.html">tutorials</a>
+            <a href="../../about.html">about</a>
+          </div>
+          <div class="footer-col">
+            <h4>studio</h4>
+            <p>catania, italy</p>
+            <p>utc +1</p>
+            <p>studio@buzatu.it</p>
+          </div>
+          <div class="footer-col">
+            <h4>signals</h4>
+            <p>subscribe for new drops and private previews.</p>
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="email" required />
+              <button type="submit">join</button>
+            </form>
+            <div class="footer-social">
+              <a href="#">instagram</a>
+              <a href="#">vimeo</a>
+              <a href="#">behance</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 buzatu</span>
+          <span>crafted in catania · cinematic dark mode</span>
+        </div>
+      </footer>
+    </div>
+
+    <a class="floating-cta" href="mailto:studio@buzatu.it">start a brief</a>
+    <button class="scroll-top" type="button">top</button>
+    <div class="toast" aria-live="polite"></div>
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button">close</button>
+      <img class="lightbox-image" alt="expanded photograph" />
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

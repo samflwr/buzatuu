@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>buzatu — oop in python</title>
+    <meta name="description" content="classi, dataclass e composizione in python." />
+    <meta name="keywords" content="buzatu, samir buzatu, tutorial, programmazione, ai, cinema, fotografia, python" />
+    <meta name="author" content="samir buzatu" />
+    <meta name="publisher" content="buzatu" />
+    <meta name="application-name" content="buzatu" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:site_name" content="buzatu" />
+    <meta property="og:title" content="buzatu — oop in python" />
+    <meta property="og:description" content="classi, dataclass e composizione in python." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://buzatu.it/tutorials/python/05-oop.html" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="buzatu — oop in python" />
+    <meta name="twitter:description" content="classi, dataclass e composizione in python." />
+    <meta property="og:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta name="twitter:image:alt" content="buzatu cinematic systems studio" />
+    <link rel="canonical" href="https://buzatu.it/tutorials/python/05-oop.html" />
+    <link rel="icon" type="image/svg+xml" href="https://buzatu.it/assets/favicon.svg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://buzatu.it/sitemap.xml" />
+    <link rel="alternate" hreflang="it" href="https://buzatu.it/tutorials/python/05-oop.html" />
+    <link rel="alternate" hreflang="x-default" href="https://buzatu.it/tutorials/python/05-oop.html" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "potentialAction": {"@type": "SearchAction", "target": "https://buzatu.it/tutorials/index.html?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "buzatu — oop in python", "description": "classi, dataclass e composizione in python.", "url": "https://buzatu.it/tutorials/python/05-oop.html", "isPartOf": {"@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it"}, "inLanguage": "it"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "oop in python", "description": "classi, dataclass e composizione in python.", "url": "https://buzatu.it/tutorials/python/05-oop.html", "learningResourceType": "tutorial", "educationalLevel": "beginner", "inLanguage": "it", "creator": {"@type": "Person", "name": "samir buzatu"}, "about": ["oop", "dataclass", "classi"], "keywords": "oop, dataclass, classi", "educationalUse": "tutorial", "timeRequired": "PT26M", "isPartOf": {"@type": "CollectionPage", "name": "tutorial python", "url": "https://buzatu.it/tutorials/python/index.html"}}</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "home", "item": "https://buzatu.it/"}, {"@type": "ListItem", "position": 2, "name": "tutorials", "item": "https://buzatu.it/tutorials/"}, {"@type": "ListItem", "position": 3, "name": "python", "item": "https://buzatu.it/tutorials/python/index.html"}, {"@type": "ListItem", "position": 4, "name": "oop in python", "item": "https://buzatu.it/tutorials/python/05-oop.html"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "email": "studio@buzatu.it", "address": {"@type": "PostalAddress", "addressLocality": "catania", "addressCountry": "it"}, "founder": {"@type": "Person", "name": "samir buzatu"}}</script>
+</head>
+  <body>
+    <a class="skip-link" href="#main-content">skip to content</a>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <p class="preloader-title">buzatu systems initializing</p>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-meta">
+          <span class="preloader-count" aria-live="polite">0%</span>
+          <span class="preloader-status">calibrating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="transition-layer" aria-hidden="true"></div>
+    <div class="ambient"></div>
+    <div class="scroll-progress"><span></span></div>
+
+    <div data-barba="wrapper">
+      <header class="site-header">
+        <a class="brand" href="../../index.html" aria-label="buzatu home">
+          <span class="brand-mark">b</span>
+          <span class="brand-word">buzatu</span>
+        </a>
+        <nav class="site-nav" aria-label="primary">
+          <a class="nav-link" href="../../index.html" data-nav="home">home</a>
+          <a class="nav-link" href="../../work.html" data-nav="work">work</a>
+          <a class="nav-link" href="../../photography.html" data-nav="photography">photography</a>
+          <a class="nav-link" href="../index.html" data-nav="tutorials">tutorials</a>
+          <a class="nav-link" href="../../about.html" data-nav="about">about</a>
+        </nav>
+        <div class="nav-controls">
+          <span class="status-pill">availability: limited select briefs</span>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+          <div class="nav-overlay-top">
+            <p class="nav-overlay-label">menu</p>
+            <button class="nav-close" type="button">close</button>
+          </div>
+          <nav class="nav-overlay-links">
+            <a href="../../index.html" data-nav="home">home</a>
+            <a href="../../work.html" data-nav="work">work</a>
+            <a href="../../photography.html" data-nav="photography">photography</a>
+            <a href="../index.html" data-nav="tutorials">tutorials</a>
+            <a href="../../about.html" data-nav="about">about</a>
+          </nav>
+          <div class="nav-overlay-footer">
+            <p class="nav-overlay-text">studio@buzatu.it</p>
+            <div class="nav-overlay-meta">
+              <span>catania, italy</span>
+              <span>cinematic systems · ai · vfx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main data-barba="container" data-barba-namespace="python-05-oop" class="page" id="main-content">
+        <section class="page-hero tutorial-hero">
+          <nav class="breadcrumbs" data-animate="reveal">
+            <a href="../index.html">tutorials</a>
+            <a href="index.html">python</a>
+            <span>oop</span>
+          </nav>
+          <p class="eyebrow" data-animate="reveal">lezione 05</p>
+          <h1 class="page-title" data-animate="reveal">oop in python</h1>
+          <p class="page-sub" data-animate="reveal">classi, metodi, dataclass e design pulito.</p>
+          <div class="tutorial-tags" data-animate="reveal">
+            <span class="tag">livello: base</span>
+            <span class="tag">durata: 26 min</span>
+            <span class="tag">output: classi riusabili</span>
+            <span class="tag">badge: oop core</span>
+</div>
+        </section>
+
+        <section class="tutorial-layout">
+          <aside class="tutorial-aside" data-animate="reveal">
+            <h3>indice</h3>
+            <ul class="toc">
+              <li><a href="#classi">classi</a></li>
+              <li><a href="#dataclass">dataclass</a></li>
+              <li><a href="#inherit">ereditarietà</a></li>
+              <li><a href="#tips">pattern</a></li>
+              <li><a href="#panoramica">panoramica</a></li>
+              <li><a href="#obiettivi">obiettivi</a></li>
+              <li><a href="#scheda-rapida">scheda rapida</a></li>
+              <li><a href="#mini-progetto">mini progetto</a></li>
+              <li><a href="#checklist">checklist</a></li>
+            </ul>
+          </aside>
+
+          <article class="tutorial-article">
+            <section id="classi" data-animate="reveal">
+  <h2>classi</h2>
+  <pre class="code-block"><code class="language-python">class User:
+    def __init__(self, name: str):
+        self.name = name
+
+    def greet(self) -&gt; str:
+        return f&quot;ciao {self.name}&quot;</code></pre>
+</section>
+
+            <section id="dataclass" data-animate="reveal">
+  <h2>dataclass</h2>
+  <pre class="code-block"><code class="language-python">from dataclasses import dataclass
+
+@dataclass
+class Project:
+    title: str
+    year: int</code></pre>
+</section>
+
+            <section id="inherit" data-animate="reveal">
+  <h2>ereditarietà</h2>
+  <pre class="code-block"><code class="language-python">class Base:
+    def run(self):
+        return &quot;base&quot;
+
+class Child(Base):
+    def run(self):
+        return &quot;child&quot;</code></pre>
+</section>
+
+            <section id="tips" data-animate="reveal">
+  <h2>pattern</h2>
+  <p>usa composizione quando possibile per ridurre accoppiamento.</p><div class="callout"><p>tip: dataclass + typing rendono le classi leggibili.</p></div>
+</section>
+          
+            <section id="panoramica" data-animate="reveal">
+              <h2>panoramica</h2>
+              <p>In questo capitolo su oop in python, classi, metodi, dataclass e design pulito. L'obiettivo è trasformare i concetti in micro-pattern riutilizzabili con esempi piccoli e verificabili.</p>
+              <p>Lavora in sequenza: leggi, prova, modifica gli snippet e annota i trade-off principali (performance, leggibilità, manutenzione).</p>
+              <div class="callout">
+                <p>badge: oop core</p>
+              </div>
+            </section>
+
+            <section id="obiettivi" data-animate="reveal">
+              <h2>obiettivi</h2>
+              <ul class="bullet-list">
+                <li>capire e applicare classi in uno scenario reale</li>
+                <li>capire e applicare dataclass in uno scenario reale</li>
+                <li>capire e applicare ereditarietà in uno scenario reale</li>
+                <li>capire e applicare pattern in uno scenario reale</li>
+              </ul>
+            </section>
+
+            <section id="scheda-rapida" data-animate="reveal">
+              <h2>scheda rapida</h2>
+              <pre class="code-block"><code class="language-python">def main():
+    dati = [1, 2, 3]
+    risultati = [x * 2 for x in dati]
+    print(risultati)
+
+if __name__ == "__main__":
+    main()</code></pre>
+              <p>Adatta questo scheletro agli esempi della lezione e sostituisci i dati con il tuo dominio.</p>
+            </section>
+
+            <section id="mini-progetto" data-animate="reveal">
+              <h2>mini progetto</h2>
+              <p>Modella un catalogo film con classi e metodi di dominio.</p>
+              <ul class="bullet-list">
+                <li>crea classe Film con campi base</li>
+                <li>aggiungi metodi durata_min e is_feature</li>
+                <li>crea sottoclasse ShortFilm</li>
+                <li>testa con 2-3 istanze</li>
+              </ul>
+              <p>output atteso: uno script o query ripetibile con risultati verificabili.</p>
+            </section>
+
+            <section id="checklist" data-animate="reveal">
+              <h2>checklist</h2>
+              <ul class="bullet-list">
+                <li>ho eseguito gli snippet e controllato l'output</li>
+                <li>ho annotato almeno 2 trade-off</li>
+                <li>ho completato il mini progetto</li>
+                <li>ho salvato un riepilogo personale</li>
+              </ul>
+            </section>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">buzatu</span>
+            <p class="footer-copy">cinematic systems studio blending ai, film, and art practice.</p>
+            <div class="footer-badges">
+              <span>ai</span>
+              <span>vfx</span>
+              <span>photography</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>navigate</h4>
+            <a href="../../index.html">home</a>
+            <a href="../../work.html">work</a>
+            <a href="../../photography.html">photography</a>
+            <a href="../index.html">tutorials</a>
+            <a href="../../about.html">about</a>
+          </div>
+          <div class="footer-col">
+            <h4>studio</h4>
+            <p>catania, italy</p>
+            <p>utc +1</p>
+            <p>studio@buzatu.it</p>
+          </div>
+          <div class="footer-col">
+            <h4>signals</h4>
+            <p>subscribe for new drops and private previews.</p>
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="email" required />
+              <button type="submit">join</button>
+            </form>
+            <div class="footer-social">
+              <a href="#">instagram</a>
+              <a href="#">vimeo</a>
+              <a href="#">behance</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 buzatu</span>
+          <span>crafted in catania · cinematic dark mode</span>
+        </div>
+      </footer>
+    </div>
+
+    <a class="floating-cta" href="mailto:studio@buzatu.it">start a brief</a>
+    <button class="scroll-top" type="button">top</button>
+    <div class="toast" aria-live="polite"></div>
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button">close</button>
+      <img class="lightbox-image" alt="expanded photograph" />
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="../../script.js"></script>
+  </body>
+</html>

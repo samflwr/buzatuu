@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="buzatu cinematic systems studio">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0a0a" />
+      <stop offset="55%" stop-color="#1a0f12" />
+      <stop offset="100%" stop-color="#3a0a14" />
+    </linearGradient>
+    <radialGradient id="glow" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#7b0f1c" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0b0a0a" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+  <g fill="#f5f2ef">
+    <text x="90" y="260" font-family="'Archivo', 'Helvetica Neue', Arial, sans-serif" font-size="88" font-weight="700" letter-spacing="4">buzatu</text>
+    <text x="90" y="330" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="26" letter-spacing="3" fill="#c8b9b4">
+      cinematic systems studio
+    </text>
+    <text x="90" y="390" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="22" letter-spacing="2" fill="#8c7a76">
+      ai · vfx · photography · tutorials
+    </text>
+  </g>
+  <g fill="none" stroke="#7b0f1c" stroke-width="2" opacity="0.6">
+    <path d="M80 470 H1120" />
+    <path d="M80 505 H980" />
+  </g>
+</svg>

@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>tutorial di programmazione in italiano | c++, java, python, sql — buzatu</title>
+    <meta
+      name="description"
+      content="tutorial di programmazione in italiano con percorsi completi su c++, java, python e sql. lezioni modulari, esempi, esercizi e ricerca rapida."
+    />
+    <meta
+      name="keywords"
+      content="tutorial c++, tutorial java, tutorial python, tutorial sql, corsi programmazione, lezioni di programmazione, buzatu"
+    />
+    <meta name="author" content="samir buzatu" />
+    <meta name="publisher" content="buzatu" />
+    <meta name="application-name" content="buzatu" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:site_name" content="buzatu" />
+    <meta property="og:title" content="tutorial di programmazione in italiano | c++, java, python, sql — buzatu" />
+    <meta
+      property="og:description"
+      content="tutorial di programmazione in italiano con percorsi completi su c++, java, python e sql. lezioni modulari, esempi, esercizi e ricerca rapida."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://buzatu.it/tutorials/" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="tutorial di programmazione in italiano | c++, java, python, sql — buzatu" />
+    <meta
+      name="twitter:description"
+      content="tutorial di programmazione in italiano con percorsi completi su c++, java, python e sql. lezioni modulari, esempi, esercizi e ricerca rapida."
+    />
+    <meta property="og:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="buzatu tutorials archive" />
+    <meta name="twitter:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta name="twitter:image:alt" content="buzatu tutorials archive" />
+    <link rel="canonical" href="https://buzatu.it/tutorials/" />
+    <link rel="icon" type="image/svg+xml" href="https://buzatu.it/assets/favicon.svg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://buzatu.it/sitemap.xml" />
+    <link rel="alternate" hreflang="it" href="https://buzatu.it/tutorials/" />
+    <link rel="alternate" hreflang="x-default" href="https://buzatu.it/tutorials/" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "email": "studio@buzatu.it", "address": {"@type": "PostalAddress", "addressLocality": "catania", "addressCountry": "it"}, "founder": {"@type": "Person", "name": "samir buzatu"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "potentialAction": {"@type": "SearchAction", "target": "https://buzatu.it/tutorials/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "tutorial di programmazione in italiano", "description": "tutorial di programmazione in italiano con percorsi completi su c++, java, python e sql. lezioni modulari, esempi, esercizi e ricerca rapida.", "url": "https://buzatu.it/tutorials/", "isPartOf": {"@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it"}, "inLanguage": "it", "primaryImageOfPage": "https://buzatu.it/assets/og-default.svg"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "tutorial di programmazione", "description": "tutorial di programmazione in italiano con percorsi completi su c++, java, python e sql. lezioni modulari, esempi, esercizi e ricerca rapida.", "url": "https://buzatu.it/tutorials/", "hasPart": [{"@type": "CollectionPage", "name": "c++ essentials", "url": "https://buzatu.it/tutorials/cpp/index.html"}, {"@type": "CollectionPage", "name": "java essentials", "url": "https://buzatu.it/tutorials/java/index.html"}, {"@type": "CollectionPage", "name": "python essentials", "url": "https://buzatu.it/tutorials/python/index.html"}, {"@type": "CollectionPage", "name": "sql essentials", "url": "https://buzatu.it/tutorials/sql/index.html"}], "inLanguage": "it"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "buzatu", "item": "https://buzatu.it/"}, {"@type": "ListItem", "position": 2, "name": "tutorials", "item": "https://buzatu.it/tutorials/"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "indice tutorial di programmazione", "itemListOrder": "https://schema.org/ItemListOrderAscending", "numberOfItems": 55, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "c++ essentials", "url": "https://buzatu.it/tutorials/cpp/index.html"}, {"@type": "ListItem", "position": 2, "name": "fondamenti di c++", "url": "https://buzatu.it/tutorials/cpp/01-fondamenti.html"}, {"@type": "ListItem", "position": 3, "name": "puntatori e smart pointer", "url": "https://buzatu.it/tutorials/cpp/02-puntatori.html"}, {"@type": "ListItem", "position": 4, "name": "classi e oop moderna", "url": "https://buzatu.it/tutorials/cpp/03-oop.html"}, {"@type": "ListItem", "position": 5, "name": "stl e algoritmi", "url": "https://buzatu.it/tutorials/cpp/04-stl.html"}, {"@type": "ListItem", "position": 6, "name": "templates e generic programming", "url": "https://buzatu.it/tutorials/cpp/05-templates.html"}, {"@type": "ListItem", "position": 7, "name": "build system con cmake", "url": "https://buzatu.it/tutorials/cpp/06-cmake.html"}, {"@type": "ListItem", "position": 8, "name": "concorrenza e thread", "url": "https://buzatu.it/tutorials/cpp/07-concorrenza.html"}, {"@type": "ListItem", "position": 9, "name": "performance e profiling", "url": "https://buzatu.it/tutorials/cpp/08-performance.html"}, {"@type": "ListItem", "position": 10, "name": "architettura moderna", "url": "https://buzatu.it/tutorials/cpp/09-architettura.html"}, {"@type": "ListItem", "position": 11, "name": "memoria moderna in c++", "url": "https://buzatu.it/tutorials/cpp/07-memoria-moderna.html"}, {"@type": "ListItem", "position": 12, "name": "concorrenza e multithreading", "url": "https://buzatu.it/tutorials/cpp/08-concorrenza.html"}, {"@type": "ListItem", "position": 13, "name": "performance e profiling avanzato", "url": "https://buzatu.it/tutorials/cpp/09-performance.html"}, {"@type": "ListItem", "position": 14, "name": "design di api e pattern moderni", "url": "https://buzatu.it/tutorials/cpp/10-architetture-api.html"}, {"@type": "ListItem", "position": 15, "name": "java essentials", "url": "https://buzatu.it/tutorials/java/index.html"}, {"@type": "ListItem", "position": 16, "name": "struttura progetto java", "url": "https://buzatu.it/tutorials/java/01-struttura.html"}, {"@type": "ListItem", "position": 17, "name": "collections framework", "url": "https://buzatu.it/tutorials/java/02-collections.html"}, {"@type": "ListItem", "position": 18, "name": "stream api", "url": "https://buzatu.it/tutorials/java/03-stream-api.html"}, {"@type": "ListItem", "position": 19, "name": "gestione eccezioni", "url": "https://buzatu.it/tutorials/java/04-eccezioni.html"}, {"@type": "ListItem", "position": 20, "name": "file i/o e nio", "url": "https://buzatu.it/tutorials/java/05-file-io.html"}, {"@type": "ListItem", "position": 21, "name": "testing con junit", "url": "https://buzatu.it/tutorials/java/06-testing-junit.html"}, {"@type": "ListItem", "position": 22, "name": "concorrenza ed executor", "url": "https://buzatu.it/tutorials/java/07-concorrenza-executors.html"}, {"@type": "ListItem", "position": 23, "name": "jvm e garbage collection", "url": "https://buzatu.it/tutorials/java/08-jvm-gc.html"}, {"@type": "ListItem", "position": 24, "name": "architettura e solid", "url": "https://buzatu.it/tutorials/java/09-architettura-solid.html"}, {"@type": "ListItem", "position": 25, "name": "generics avanzati in java", "url": "https://buzatu.it/tutorials/java/07-generics-avanzati.html"}, {"@type": "ListItem", "position": 26, "name": "concorrenza e executor", "url": "https://buzatu.it/tutorials/java/08-concorrenza.html"}, {"@type": "ListItem", "position": 27, "name": "api rest con spring boot", "url": "https://buzatu.it/tutorials/java/09-rest-api.html"}, {"@type": "ListItem", "position": 28, "name": "performance e memoria jvm", "url": "https://buzatu.it/tutorials/java/10-jvm-performance.html"}, {"@type": "ListItem", "position": 29, "name": "python essentials", "url": "https://buzatu.it/tutorials/python/index.html"}, {"@type": "ListItem", "position": 30, "name": "sintassi e strumenti python", "url": "https://buzatu.it/tutorials/python/01-sintassi.html"}, {"@type": "ListItem", "position": 31, "name": "collezioni python", "url": "https://buzatu.it/tutorials/python/02-collezioni.html"}, {"@type": "ListItem", "position": 32, "name": "api e richieste http", "url": "https://buzatu.it/tutorials/python/03-api-http.html"}, {"@type": "ListItem", "position": 33, "name": "asyncio e concorrenza", "url": "https://buzatu.it/tutorials/python/04-asyncio.html"}, {"@type": "ListItem", "position": 34, "name": "oop in python", "url": "https://buzatu.it/tutorials/python/05-oop.html"}, {"@type": "ListItem", "position": 35, "name": "testing con pytest", "url": "https://buzatu.it/tutorials/python/06-testing-pytest.html"}, {"@type": "ListItem", "position": 36, "name": "typing avanzato", "url": "https://buzatu.it/tutorials/python/07-typing.html"}, {"@type": "ListItem", "position": 37, "name": "cli e packaging", "url": "https://buzatu.it/tutorials/python/08-cli-packaging.html"}, {"@type": "ListItem", "position": 38, "name": "data pipeline", "url": "https://buzatu.it/tutorials/python/09-data-pipeline.html"}, {"@type": "ListItem", "position": 39, "name": "dataclass e modellazione", "url": "https://buzatu.it/tutorials/python/07-dataclass.html"}, {"@type": "ListItem", "position": 40, "name": "logging e osservabilità", "url": "https://buzatu.it/tutorials/python/08-logging.html"}, {"@type": "ListItem", "position": 41, "name": "cli tools e automazione", "url": "https://buzatu.it/tutorials/python/09-cli-tools.html"}, {"@type": "ListItem", "position": 42, "name": "packaging e distribuzione", "url": "https://buzatu.it/tutorials/python/10-packaging.html"}, {"@type": "ListItem", "position": 43, "name": "sql essentials", "url": "https://buzatu.it/tutorials/sql/index.html"}, {"@type": "ListItem", "position": 44, "name": "query base sql", "url": "https://buzatu.it/tutorials/sql/01-query-base.html"}, {"@type": "ListItem", "position": 45, "name": "join avanzati", "url": "https://buzatu.it/tutorials/sql/02-join-avanzati.html"}, {"@type": "ListItem", "position": 46, "name": "aggregazioni e group by", "url": "https://buzatu.it/tutorials/sql/03-aggregazioni.html"}, {"@type": "ListItem", "position": 47, "name": "indici e performance", "url": "https://buzatu.it/tutorials/sql/04-indici-performance.html"}, {"@type": "ListItem", "position": 48, "name": "transazioni e isolamento", "url": "https://buzatu.it/tutorials/sql/05-transazioni.html"}, {"@type": "ListItem", "position": 49, "name": "design di schema", "url": "https://buzatu.it/tutorials/sql/06-schema-design.html"}, {"@type": "ListItem", "position": 50, "name": "window functions", "url": "https://buzatu.it/tutorials/sql/07-window-functions.html"}, {"@type": "ListItem", "position": 51, "name": "cte e subquery", "url": "https://buzatu.it/tutorials/sql/08-cte-subquery.html"}, {"@type": "ListItem", "position": 52, "name": "sicurezza e ruoli", "url": "https://buzatu.it/tutorials/sql/09-security-ruoli.html"}, {"@type": "ListItem", "position": 53, "name": "cte e query ricorsive", "url": "https://buzatu.it/tutorials/sql/08-cte-recursive.html"}, {"@type": "ListItem", "position": 54, "name": "views e materialized views", "url": "https://buzatu.it/tutorials/sql/09-views.html"}, {"@type": "ListItem", "position": 55, "name": "sicurezza e ruoli", "url": "https://buzatu.it/tutorials/sql/10-security-roles.html"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "I tutorial sono aggiornati?", "acceptedAnswer": {"@type": "Answer", "text": "I percorsi sono pensati per le versioni moderne dei linguaggi (C++20, Java 17+, Python 3.11+, SQL standard)."}}, {"@type": "Question", "name": "Serve un ambiente specifico?", "acceptedAnswer": {"@type": "Answer", "text": "Ogni lezione include setup rapido e comandi base per avviare il lavoro in locale."}}, {"@type": "Question", "name": "Quanto tempo serve per completare un percorso?", "acceptedAnswer": {"@type": "Answer", "text": "Ogni percorso è modulare: puoi completare le lezioni in sessioni brevi o seguire l'intero track in più giorni."}}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "home", "item": "https://buzatu.it/"}, {"@type": "ListItem", "position": 2, "name": "tutorials", "item": "https://buzatu.it/tutorials/"}]}</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">salta al contenuto</a>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <p class="preloader-title">buzatu systems initializing</p>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-meta">
+          <span class="preloader-count" aria-live="polite">0%</span>
+          <span class="preloader-status">calibrating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="transition-layer" aria-hidden="true"></div>
+    <div class="ambient"></div>
+    <div class="scroll-progress"><span></span></div>
+
+    <div data-barba="wrapper">
+      <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="buzatu home">
+          <span class="brand-mark">b</span>
+          <span class="brand-word">buzatu</span>
+        </a>
+        <nav class="site-nav" aria-label="primary">
+          <a class="nav-link" href="../index.html" data-nav="home">home</a>
+          <a class="nav-link" href="../work.html" data-nav="work">work</a>
+          <a class="nav-link" href="../photography.html" data-nav="photography">photography</a>
+          <a class="nav-link" href="index.html" data-nav="tutorials">tutorials</a>
+          <a class="nav-link" href="../about.html" data-nav="about">about</a>
+        </nav>
+        <div class="nav-controls">
+          <span class="status-pill">availability: limited select briefs</span>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+          <div class="nav-overlay-top">
+            <p class="nav-overlay-label">menu</p>
+            <button class="nav-close" type="button">close</button>
+          </div>
+          <nav class="nav-overlay-links">
+            <a href="../index.html" data-nav="home">home</a>
+            <a href="../work.html" data-nav="work">work</a>
+            <a href="../photography.html" data-nav="photography">photography</a>
+            <a href="index.html" data-nav="tutorials">tutorials</a>
+            <a href="../about.html" data-nav="about">about</a>
+          </nav>
+          <div class="nav-overlay-footer">
+            <p class="nav-overlay-text">studio@buzatu.it</p>
+            <div class="nav-overlay-meta">
+              <span>catania, italy</span>
+              <span>cinematic systems · ai · vfx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main id="main-content" data-barba="container" data-barba-namespace="tutorials" class="page">
+        <section class="page-hero tutorial-hero">
+          <nav class="breadcrumbs" aria-label="breadcrumb" data-animate="reveal">
+            <a href="../index.html">home</a>
+            <span>tutorials</span>
+          </nav>
+          <div class="tutorial-hero-grid">
+            <div class="tutorial-hero-copy">
+              <p class="eyebrow" data-animate="reveal">programming tutorials</p>
+              <h1 class="page-title" data-animate="reveal">archivio didattico</h1>
+              <p class="page-sub" data-animate="reveal">
+                tutorial modulari, in italiano, pensati per imparare con metodo: c++, java, python, sql e percorsi completi.
+              </p>
+              <div class="tutorial-tags" data-animate="reveal">
+                <span class="tag">50+ tutorial</span>
+                <span class="tag">percorsi completi</span>
+                <span class="tag">esempi + esercizi</span>
+                <span class="tag">ricerca locale</span>
+              </div>
+              <div class="hero-actions" data-animate="reveal">
+                <a class="btn primary" href="#search">cerca ora</a>
+                <a class="btn ghost" href="#percorsi">vedi percorsi</a>
+              </div>
+              <div class="hero-metrics" data-animate="reveal">
+                <div class="metric">
+                  <span class="metric-number">50+</span>
+                  <span class="metric-label">tutorial</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-number">4</span>
+                  <span class="metric-label">linguaggi</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-number">0</span>
+                  <span class="metric-label">server richiesti</span>
+                </div>
+              </div>
+            </div>
+            <div class="tutorial-hero-panel" data-animate="reveal">
+              <div class="hero-panel tutorial-panel">
+                <div class="tutorial-panel-header">
+                  <div>
+                    <p class="panel-label">learning map</p>
+                    <p class="panel-title">dal setup al progetto reale</p>
+                  </div>
+                  <span class="panel-chip">track guidato</span>
+                </div>
+                <div class="panel-steps">
+                  <div class="panel-step">
+                    <span class="panel-index">01</span>
+                    <div>
+                      <p class="panel-step-title">fondamenti</p>
+                      <p class="panel-step-meta">logica, struttura, debugging</p>
+                    </div>
+                  </div>
+                  <div class="panel-step">
+                    <span class="panel-index">02</span>
+                    <div>
+                      <p class="panel-step-title">core language</p>
+                      <p class="panel-step-meta">sintassi, oop, standard library</p>
+                    </div>
+                  </div>
+                  <div class="panel-step">
+                    <span class="panel-index">03</span>
+                    <div>
+                      <p class="panel-step-title">pratica</p>
+                      <p class="panel-step-meta">esercizi, pattern, testing</p>
+                    </div>
+                  </div>
+                  <div class="panel-step">
+                    <span class="panel-index">04</span>
+                    <div>
+                      <p class="panel-step-title">progetto</p>
+                      <p class="panel-step-meta">mini brief e refactor guidato</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <span class="panel-pill">c++ · java · python · sql</span>
+                  <span class="panel-pill">indice completo sotto</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section tutorial-intro" id="fondamenti">
+          <div class="section-head">
+            <h2 class="section-title" data-animate="reveal">fondamenti comuni</h2>
+            <p class="section-sub" data-animate="reveal">prima dei linguaggi: logica, metodo, qualità.</p>
+          </div>
+          <div class="foundation-grid">
+            <article class="tutorial-card" data-animate="reveal">
+              <h3>logica e algoritmi</h3>
+              <p>problem solving, decomposizione, pseudocodice, pattern ricorrenti.</p>
+            </article>
+            <article class="tutorial-card" data-animate="reveal">
+              <h3>strutture dati</h3>
+              <p>array, liste, mappe, stack e queue, quando usarle e perché.</p>
+            </article>
+            <article class="tutorial-card" data-animate="reveal">
+              <h3>qualità del codice</h3>
+              <p>naming, modularità, testing, gestione degli errori, documentazione.</p>
+            </article>
+            <article class="tutorial-card" data-animate="reveal">
+              <h3>strumenti moderni</h3>
+              <p>git, versioning, ambiente di sviluppo, debug, linting.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section search-section" id="search">
+          <div class="section-head">
+            <h2 class="section-title" data-animate="reveal">cerca un tutorial</h2>
+            <p class="section-sub" data-animate="reveal">usa la lente per trovare argomenti, sintassi o esempi.</p>
+          </div>
+          <form class="search-panel" data-animate="reveal" role="search" action="./" method="get">
+            <label class="sr-only" for="tutorial-search">cerca un tutorial</label>
+            <div class="search-input">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                <path
+                  d="M15.5 15.5 21 21m-3.5-9a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+              <input
+                id="tutorial-search"
+                name="q"
+                type="search"
+                placeholder="cerca tutorial, linguaggi, argomenti"
+                autocomplete="off"
+                aria-describedby="tutorial-count search-hint"
+                aria-controls="tutorial-results"
+              />
+            </div>
+            <p id="search-hint" class="search-hint">
+              suggerimento: prova "array", "classi", "join", oppure filtra per linguaggio.
+            </p>
+            <div class="search-filters" role="tablist" aria-label="filtri linguaggio">
+              <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">all</button>
+              <button class="filter-btn" type="button" data-filter="cpp" aria-pressed="false">c++</button>
+              <button class="filter-btn" type="button" data-filter="java" aria-pressed="false">java</button>
+              <button class="filter-btn" type="button" data-filter="python" aria-pressed="false">python</button>
+              <button class="filter-btn" type="button" data-filter="sql" aria-pressed="false">sql</button>
+            </div>
+          </form>
+          <div class="search-meta" data-animate="reveal">
+            <span id="tutorial-count" role="status" aria-live="polite">0 tutorial trovati</span>
+          </div>
+          <div id="tutorial-results" class="search-results"></div>
+          <noscript>
+            <div class="result-empty">attiva javascript per usare la ricerca. trovi l'indice completo più sotto.</div>
+          </noscript>
+        </section>
+
+        <section class="section" id="percorsi">
+          <div class="section-head">
+            <h2 class="section-title" data-animate="reveal">percorsi linguaggio</h2>
+            <p class="section-sub" data-animate="reveal">percorsi completi con teoria, sintassi, esercizi.</p>
+          </div>
+          <div class="lesson-grid">
+            <article class="lesson-card" data-animate="reveal">
+              <p class="lesson-label">c++</p>
+              <h3>fondamenti e memoria</h3>
+              <p>tipi, puntatori, gestione risorse, o.o.p. moderna.</p>
+              <a class="text-link" href="cpp/index.html">entra</a>
+            </article>
+            <article class="lesson-card" data-animate="reveal">
+              <p class="lesson-label">java</p>
+              <h3>oop robusta e toolchain</h3>
+              <p>classi, package, stream api, build tools.</p>
+              <a class="text-link" href="java/index.html">entra</a>
+            </article>
+            <article class="lesson-card" data-animate="reveal">
+              <p class="lesson-label">python</p>
+              <h3>workflow e automazione</h3>
+              <p>script, data manipulation, api, automazioni.</p>
+              <a class="text-link" href="python/index.html">entra</a>
+            </article>
+            <article class="lesson-card" data-animate="reveal">
+              <p class="lesson-label">sql</p>
+              <h3>database e query language</h3>
+              <p>query, join, normalizzazione, performance.</p>
+              <a class="text-link" href="sql/index.html">entra</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section tutorial-index" id="indice">
+          <div class="section-head">
+            <h2 class="section-title" data-animate="reveal">indice completo tutorial</h2>
+            <p class="section-sub" data-animate="reveal">
+              elenco completo delle lezioni, ottimizzato per la navigazione e l'indicizzazione.
+            </p>
+          </div>
+          <div class="tutorial-index-grid">
+            <div class="tutorial-index-col" data-animate="reveal">
+              <div class="tutorial-index-head">
+                <div>
+                  <p class="index-label">c++ track</p>
+                  <h3>c++ lessons</h3>
+                </div>
+                <a class="text-link" href="cpp/index.html">track completo</a>
+              </div>
+              <ul class="tutorial-list">
+                <li>
+                  <a href="cpp/index.html">
+                    <span class="tutorial-list-title">c++ essentials</span>
+                    <span class="tutorial-meta">base → avanzato · 10 ore</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/01-fondamenti.html">
+                    <span class="tutorial-list-title">fondamenti di c++</span>
+                    <span class="tutorial-meta">base · 20 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/02-puntatori.html">
+                    <span class="tutorial-list-title">puntatori e smart pointer</span>
+                    <span class="tutorial-meta">intermedio · 25 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/03-oop.html">
+                    <span class="tutorial-list-title">classi e oop moderna</span>
+                    <span class="tutorial-meta">intermedio · 30 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/04-stl.html">
+                    <span class="tutorial-list-title">stl e algoritmi</span>
+                    <span class="tutorial-meta">intermedio · 25 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/05-templates.html">
+                    <span class="tutorial-list-title">templates e generic programming</span>
+                    <span class="tutorial-meta">intermedio · 35 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/06-cmake.html">
+                    <span class="tutorial-list-title">build system con cmake</span>
+                    <span class="tutorial-meta">base · 30 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/07-concorrenza.html">
+                    <span class="tutorial-list-title">concorrenza e thread</span>
+                    <span class="tutorial-meta">avanzato · 45 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/08-performance.html">
+                    <span class="tutorial-list-title">performance e profiling</span>
+                    <span class="tutorial-meta">avanzato · 50 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/09-architettura.html">
+                    <span class="tutorial-list-title">architettura moderna</span>
+                    <span class="tutorial-meta">avanzato · 55 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/07-memoria-moderna.html">
+                    <span class="tutorial-list-title">memoria moderna in c++</span>
+                    <span class="tutorial-meta">intermedio · 35 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/08-concorrenza.html">
+                    <span class="tutorial-list-title">concorrenza e multithreading</span>
+                    <span class="tutorial-meta">avanzato · 40 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/09-performance.html">
+                    <span class="tutorial-list-title">performance e profiling avanzato</span>
+                    <span class="tutorial-meta">avanzato · 45 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="cpp/10-architetture-api.html">
+                    <span class="tutorial-list-title">design di api e pattern moderni</span>
+                    <span class="tutorial-meta">avanzato · 45 min</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tutorial-index-col" data-animate="reveal">
+              <div class="tutorial-index-head">
+                <div>
+                  <p class="index-label">java track</p>
+                  <h3>java lessons</h3>
+                </div>
+                <a class="text-link" href="java/index.html">track completo</a>
+              </div>
+              <ul class="tutorial-list">
+                <li>
+                  <a href="java/index.html">
+                    <span class="tutorial-list-title">java essentials</span>
+                    <span class="tutorial-meta">base → intermedio · 9 ore</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/01-struttura.html">
+                    <span class="tutorial-list-title">struttura progetto java</span>
+                    <span class="tutorial-meta">base · 18 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/02-collections.html">
+                    <span class="tutorial-list-title">collections framework</span>
+                    <span class="tutorial-meta">base · 22 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/03-stream-api.html">
+                    <span class="tutorial-list-title">stream api</span>
+                    <span class="tutorial-meta">intermedio · 20 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/04-eccezioni.html">
+                    <span class="tutorial-list-title">gestione eccezioni</span>
+                    <span class="tutorial-meta">base · 18 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/05-file-io.html">
+                    <span class="tutorial-list-title">file i/o e nio</span>
+                    <span class="tutorial-meta">base · 26 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/06-testing-junit.html">
+                    <span class="tutorial-list-title">testing con junit</span>
+                    <span class="tutorial-meta">base · 24 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/07-concorrenza-executors.html">
+                    <span class="tutorial-list-title">concorrenza ed executor</span>
+                    <span class="tutorial-meta">avanzato · 45 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/08-jvm-gc.html">
+                    <span class="tutorial-list-title">jvm e garbage collection</span>
+                    <span class="tutorial-meta">avanzato · 50 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/09-architettura-solid.html">
+                    <span class="tutorial-list-title">architettura e solid</span>
+                    <span class="tutorial-meta">avanzato · 55 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/07-generics-avanzati.html">
+                    <span class="tutorial-list-title">generics avanzati in java</span>
+                    <span class="tutorial-meta">intermedio · 35 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/08-concorrenza.html">
+                    <span class="tutorial-list-title">concorrenza e executor</span>
+                    <span class="tutorial-meta">avanzato · 40 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/09-rest-api.html">
+                    <span class="tutorial-list-title">api rest con spring boot</span>
+                    <span class="tutorial-meta">intermedio · 45 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="java/10-jvm-performance.html">
+                    <span class="tutorial-list-title">performance e memoria jvm</span>
+                    <span class="tutorial-meta">avanzato · 45 min</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tutorial-index-col" data-animate="reveal">
+              <div class="tutorial-index-head">
+                <div>
+                  <p class="index-label">python track</p>
+                  <h3>python lessons</h3>
+                </div>
+                <a class="text-link" href="python/index.html">track completo</a>
+              </div>
+              <ul class="tutorial-list">
+                <li>
+                  <a href="python/index.html">
+                    <span class="tutorial-list-title">python essentials</span>
+                    <span class="tutorial-meta">base → intermedio · 8 ore</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/01-sintassi.html">
+                    <span class="tutorial-list-title">sintassi e strumenti python</span>
+                    <span class="tutorial-meta">base · 15 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/02-collezioni.html">
+                    <span class="tutorial-list-title">collezioni python</span>
+                    <span class="tutorial-meta">base · 18 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/03-api-http.html">
+                    <span class="tutorial-list-title">api e richieste http</span>
+                    <span class="tutorial-meta">intermedio · 22 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/04-asyncio.html">
+                    <span class="tutorial-list-title">asyncio e concorrenza</span>
+                    <span class="tutorial-meta">intermedio · 24 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/05-oop.html">
+                    <span class="tutorial-list-title">oop in python</span>
+                    <span class="tutorial-meta">base · 26 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/06-testing-pytest.html">
+                    <span class="tutorial-list-title">testing con pytest</span>
+                    <span class="tutorial-meta">base · 22 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/07-typing.html">
+                    <span class="tutorial-list-title">typing avanzato</span>
+                    <span class="tutorial-meta">intermedio · 40 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/08-cli-packaging.html">
+                    <span class="tutorial-list-title">cli e packaging</span>
+                    <span class="tutorial-meta">intermedio · 50 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/09-data-pipeline.html">
+                    <span class="tutorial-list-title">data pipeline</span>
+                    <span class="tutorial-meta">intermedio · 55 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/07-dataclass.html">
+                    <span class="tutorial-list-title">dataclass e modellazione</span>
+                    <span class="tutorial-meta">intermedio · 35 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/08-logging.html">
+                    <span class="tutorial-list-title">logging e osservabilità</span>
+                    <span class="tutorial-meta">intermedio · 35 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/09-cli-tools.html">
+                    <span class="tutorial-list-title">cli tools e automazione</span>
+                    <span class="tutorial-meta">intermedio · 40 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="python/10-packaging.html">
+                    <span class="tutorial-list-title">packaging e distribuzione</span>
+                    <span class="tutorial-meta">intermedio · 40 min</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tutorial-index-col" data-animate="reveal">
+              <div class="tutorial-index-head">
+                <div>
+                  <p class="index-label">sql track</p>
+                  <h3>sql lessons</h3>
+                </div>
+                <a class="text-link" href="sql/index.html">track completo</a>
+              </div>
+              <ul class="tutorial-list">
+                <li>
+                  <a href="sql/index.html">
+                    <span class="tutorial-list-title">sql essentials</span>
+                    <span class="tutorial-meta">base → intermedio · 7 ore</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/01-query-base.html">
+                    <span class="tutorial-list-title">query base sql</span>
+                    <span class="tutorial-meta">base · 12 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/02-join-avanzati.html">
+                    <span class="tutorial-list-title">join avanzati</span>
+                    <span class="tutorial-meta">base · 15 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/03-aggregazioni.html">
+                    <span class="tutorial-list-title">aggregazioni e group by</span>
+                    <span class="tutorial-meta">base · 14 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/04-indici-performance.html">
+                    <span class="tutorial-list-title">indici e performance</span>
+                    <span class="tutorial-meta">intermedio · 16 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/05-transazioni.html">
+                    <span class="tutorial-list-title">transazioni e isolamento</span>
+                    <span class="tutorial-meta">intermedio · 20 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/06-schema-design.html">
+                    <span class="tutorial-list-title">design di schema</span>
+                    <span class="tutorial-meta">base · 28 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/07-window-functions.html">
+                    <span class="tutorial-list-title">window functions</span>
+                    <span class="tutorial-meta">intermedio · 40 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/08-cte-subquery.html">
+                    <span class="tutorial-list-title">cte e subquery</span>
+                    <span class="tutorial-meta">intermedio · 45 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/09-security-ruoli.html">
+                    <span class="tutorial-list-title">sicurezza e ruoli</span>
+                    <span class="tutorial-meta">intermedio · 35 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/08-cte-recursive.html">
+                    <span class="tutorial-list-title">cte e query ricorsive</span>
+                    <span class="tutorial-meta">intermedio · 35 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/09-views.html">
+                    <span class="tutorial-list-title">views e materialized views</span>
+                    <span class="tutorial-meta">intermedio · 30 min</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="sql/10-security-roles.html">
+                    <span class="tutorial-list-title">sicurezza e ruoli</span>
+                    <span class="tutorial-meta">intermedio · 35 min</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2 class="section-title" data-animate="reveal">faq rapide</h2>
+            <p class="section-sub" data-animate="reveal">risposte essenziali per iniziare subito.</p>
+          </div>
+          <div class="foundation-grid">
+            <article class="tutorial-card" data-animate="reveal">
+              <h3>i tutorial sono aggiornati?</h3>
+              <p>si, i percorsi seguono versioni moderne (c++20, java 17+, python 3.11+, sql standard).</p>
+            </article>
+            <article class="tutorial-card" data-animate="reveal">
+              <h3>serve un ambiente specifico?</h3>
+              <p>ogni lezione include setup minimale per lavorare in locale senza servizi esterni.</p>
+            </article>
+            <article class="tutorial-card" data-animate="reveal">
+              <h3>quanto tempo richiede un percorso?</h3>
+              <p>puoi seguire le lezioni in sessioni brevi o completare il track in più giorni.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section cta" data-animate="reveal">
+          <div class="cta-card">
+            <div>
+              <p class="cta-label">modularità futura</p>
+              <h2>aggiungi tutorial senza frizioni</h2>
+              <p class="cta-sub">
+                ogni nuova pagina entra nell'indice con un singolo record json. zero server, zero build obbligatoria.
+              </p>
+            </div>
+            <a class="btn primary" href="../about.html">contatta per supporto</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">buzatu</span>
+            <p class="footer-copy">cinematic systems studio blending ai, film, and art practice.</p>
+            <div class="footer-badges">
+              <span>ai</span>
+              <span>vfx</span>
+              <span>photography</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>navigate</h4>
+            <a href="../index.html">home</a>
+            <a href="../work.html">work</a>
+            <a href="../photography.html">photography</a>
+            <a href="index.html">tutorials</a>
+            <a href="../about.html">about</a>
+          </div>
+          <div class="footer-col">
+            <h4>studio</h4>
+            <p>catania, italy</p>
+            <p>utc +1</p>
+            <p>studio@buzatu.it</p>
+          </div>
+          <div class="footer-col">
+            <h4>signals</h4>
+            <p>subscribe for new drops and private previews.</p>
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="email" required />
+              <button type="submit">join</button>
+            </form>
+            <div class="footer-social">
+              <a href="#">instagram</a>
+              <a href="#">vimeo</a>
+              <a href="#">behance</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 buzatu</span>
+          <span>crafted in catania · cinematic dark mode</span>
+        </div>
+      </footer>
+    </div>
+
+    <a class="floating-cta" href="mailto:studio@buzatu.it">start a brief</a>
+    <button class="scroll-top" type="button">top</button>
+    <div class="toast" aria-live="polite"></div>
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button">close</button>
+      <img class="lightbox-image" alt="expanded photograph" />
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
