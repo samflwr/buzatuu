@@ -6,7 +6,7 @@
     "language": "cpp",
     "level": "base → avanzato",
     "duration": "10 ore",
-    "url": "cpp/index.html",
+    "url": "cpp/",
     "tags": [
       "c++",
       "memoria",
@@ -23,7 +23,7 @@
     "language": "cpp",
     "level": "base",
     "duration": "20 min",
-    "url": "cpp/01-fondamenti.html",
+    "url": "cpp/01-fondamenti",
     "tags": [
       "tipi",
       "iostream",
@@ -39,7 +39,7 @@
     "language": "cpp",
     "level": "intermedio",
     "duration": "25 min",
-    "url": "cpp/02-puntatori.html",
+    "url": "cpp/02-puntatori",
     "tags": [
       "puntatori",
       "smart pointer",
@@ -55,7 +55,7 @@
     "language": "cpp",
     "level": "intermedio",
     "duration": "30 min",
-    "url": "cpp/03-oop.html",
+    "url": "cpp/03-oop",
     "tags": [
       "oop",
       "classi",
@@ -70,7 +70,7 @@
     "language": "cpp",
     "level": "intermedio",
     "duration": "25 min",
-    "url": "cpp/04-stl.html",
+    "url": "cpp/04-stl",
     "tags": [
       "stl",
       "vector",
@@ -86,7 +86,7 @@
     "language": "cpp",
     "level": "intermedio",
     "duration": "35 min",
-    "url": "cpp/05-templates.html",
+    "url": "cpp/05-templates",
     "tags": [
       "template",
       "generic",
@@ -101,7 +101,7 @@
     "language": "cpp",
     "level": "base",
     "duration": "30 min",
-    "url": "cpp/06-cmake.html",
+    "url": "cpp/06-cmake",
     "tags": [
       "cmake",
       "build",
@@ -116,7 +116,7 @@
     "language": "cpp",
     "level": "avanzato",
     "duration": "45 min",
-    "url": "cpp/07-concorrenza.html",
+    "url": "cpp/07-concorrenza",
     "tags": [
       "thread",
       "mutex",
@@ -132,7 +132,7 @@
     "language": "cpp",
     "level": "avanzato",
     "duration": "50 min",
-    "url": "cpp/08-performance.html",
+    "url": "cpp/08-performance",
     "tags": [
       "performance",
       "profiling",
@@ -147,7 +147,7 @@
     "language": "cpp",
     "level": "avanzato",
     "duration": "55 min",
-    "url": "cpp/09-architettura.html",
+    "url": "cpp/09-architettura",
     "tags": [
       "architettura",
       "raii",
@@ -163,7 +163,7 @@
     "language": "java",
     "level": "base → intermedio",
     "duration": "9 ore",
-    "url": "java/index.html",
+    "url": "java/",
     "tags": [
       "oop",
       "jvm",
@@ -179,7 +179,7 @@
     "language": "java",
     "level": "base",
     "duration": "18 min",
-    "url": "java/01-struttura.html",
+    "url": "java/01-struttura",
     "tags": [
       "package",
       "classpath",
@@ -195,7 +195,7 @@
     "language": "java",
     "level": "base",
     "duration": "22 min",
-    "url": "java/02-collections.html",
+    "url": "java/02-collections",
     "tags": [
       "collections",
       "list",
@@ -211,7 +211,7 @@
     "language": "java",
     "level": "intermedio",
     "duration": "20 min",
-    "url": "java/03-stream-api.html",
+    "url": "java/03-stream-api",
     "tags": [
       "stream",
       "filter",
@@ -227,7 +227,7 @@
     "language": "java",
     "level": "base",
     "duration": "18 min",
-    "url": "java/04-eccezioni.html",
+    "url": "java/04-eccezioni",
     "tags": [
       "errori",
       "exception",
@@ -242,7 +242,7 @@
     "language": "java",
     "level": "base",
     "duration": "26 min",
-    "url": "java/05-file-io.html",
+    "url": "java/05-file-io",
     "tags": [
       "nio",
       "file",
@@ -257,7 +257,7 @@
     "language": "java",
     "level": "base",
     "duration": "24 min",
-    "url": "java/06-testing-junit.html",
+    "url": "java/06-testing-junit",
     "tags": [
       "junit",
       "testing",
@@ -272,7 +272,7 @@
     "language": "java",
     "level": "avanzato",
     "duration": "45 min",
-    "url": "java/07-concorrenza-executors.html",
+    "url": "java/07-concorrenza-executors",
     "tags": [
       "executor",
       "future",
@@ -288,7 +288,7 @@
     "language": "java",
     "level": "avanzato",
     "duration": "50 min",
-    "url": "java/08-jvm-gc.html",
+    "url": "java/08-jvm-gc",
     "tags": [
       "jvm",
       "gc",
@@ -303,7 +303,7 @@
     "language": "java",
     "level": "avanzato",
     "duration": "55 min",
-    "url": "java/09-architettura-solid.html",
+    "url": "java/09-architettura-solid",
     "tags": [
       "solid",
       "design pattern",
@@ -318,7 +318,7 @@
     "language": "python",
     "level": "base → intermedio",
     "duration": "8 ore",
-    "url": "python/index.html",
+    "url": "python/",
     "tags": [
       "scripting",
       "automazione",
@@ -334,7 +334,7 @@
     "language": "python",
     "level": "base",
     "duration": "15 min",
-    "url": "python/01-sintassi.html",
+    "url": "python/01-sintassi",
     "tags": [
       "variabili",
       "funzioni",
@@ -350,7 +350,7 @@
     "language": "python",
     "level": "base",
     "duration": "18 min",
-    "url": "python/02-collezioni.html",
+    "url": "python/02-collezioni",
     "tags": [
       "list",
       "dict",
@@ -366,7 +366,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "22 min",
-    "url": "python/03-api-http.html",
+    "url": "python/03-api-http",
     "tags": [
       "api",
       "http",
@@ -382,7 +382,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "24 min",
-    "url": "python/04-asyncio.html",
+    "url": "python/04-asyncio",
     "tags": [
       "async",
       "await",
@@ -397,7 +397,7 @@
     "language": "python",
     "level": "base",
     "duration": "26 min",
-    "url": "python/05-oop.html",
+    "url": "python/05-oop",
     "tags": [
       "oop",
       "dataclass",
@@ -412,7 +412,7 @@
     "language": "python",
     "level": "base",
     "duration": "22 min",
-    "url": "python/06-testing-pytest.html",
+    "url": "python/06-testing-pytest",
     "tags": [
       "pytest",
       "testing",
@@ -427,7 +427,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "40 min",
-    "url": "python/07-typing.html",
+    "url": "python/07-typing",
     "tags": [
       "typing",
       "protocol",
@@ -442,7 +442,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "50 min",
-    "url": "python/08-cli-packaging.html",
+    "url": "python/08-cli-packaging",
     "tags": [
       "cli",
       "packaging",
@@ -457,7 +457,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "55 min",
-    "url": "python/09-data-pipeline.html",
+    "url": "python/09-data-pipeline",
     "tags": [
       "data",
       "sqlite",
@@ -472,7 +472,7 @@
     "language": "sql",
     "level": "base → intermedio",
     "duration": "7 ore",
-    "url": "sql/index.html",
+    "url": "sql/",
     "tags": [
       "query",
       "join",
@@ -488,7 +488,7 @@
     "language": "sql",
     "level": "base",
     "duration": "12 min",
-    "url": "sql/01-query-base.html",
+    "url": "sql/01-query-base",
     "tags": [
       "select",
       "where",
@@ -504,7 +504,7 @@
     "language": "sql",
     "level": "base",
     "duration": "15 min",
-    "url": "sql/02-join-avanzati.html",
+    "url": "sql/02-join-avanzati",
     "tags": [
       "join",
       "left join",
@@ -519,7 +519,7 @@
     "language": "sql",
     "level": "base",
     "duration": "14 min",
-    "url": "sql/03-aggregazioni.html",
+    "url": "sql/03-aggregazioni",
     "tags": [
       "group by",
       "having",
@@ -534,7 +534,7 @@
     "language": "sql",
     "level": "intermedio",
     "duration": "16 min",
-    "url": "sql/04-indici-performance.html",
+    "url": "sql/04-indici-performance",
     "tags": [
       "index",
       "performance",
@@ -549,7 +549,7 @@
     "language": "sql",
     "level": "intermedio",
     "duration": "20 min",
-    "url": "sql/05-transazioni.html",
+    "url": "sql/05-transazioni",
     "tags": [
       "transaction",
       "rollback",
@@ -564,7 +564,7 @@
     "language": "sql",
     "level": "base",
     "duration": "28 min",
-    "url": "sql/06-schema-design.html",
+    "url": "sql/06-schema-design",
     "tags": [
       "schema",
       "normalizzazione",
@@ -579,7 +579,7 @@
     "language": "sql",
     "level": "intermedio",
     "duration": "40 min",
-    "url": "sql/07-window-functions.html",
+    "url": "sql/07-window-functions",
     "tags": [
       "window",
       "partition",
@@ -594,7 +594,7 @@
     "language": "sql",
     "level": "intermedio",
     "duration": "45 min",
-    "url": "sql/08-cte-subquery.html",
+    "url": "sql/08-cte-subquery",
     "tags": [
       "cte",
       "subquery",
@@ -609,7 +609,7 @@
     "language": "sql",
     "level": "intermedio",
     "duration": "35 min",
-    "url": "sql/09-security-ruoli.html",
+    "url": "sql/09-security-ruoli",
     "tags": [
       "security",
       "ruoli",
@@ -624,7 +624,7 @@
     "language": "cpp",
     "level": "intermedio",
     "duration": "35 min",
-    "url": "cpp/07-memoria-moderna.html",
+    "url": "cpp/07-memoria-moderna",
     "tags": [
       "smart pointer",
       "raii",
@@ -640,7 +640,7 @@
     "language": "cpp",
     "level": "avanzato",
     "duration": "40 min",
-    "url": "cpp/08-concorrenza.html",
+    "url": "cpp/08-concorrenza",
     "tags": [
       "thread",
       "mutex",
@@ -655,7 +655,7 @@
     "language": "cpp",
     "level": "avanzato",
     "duration": "45 min",
-    "url": "cpp/09-performance.html",
+    "url": "cpp/09-performance",
     "tags": [
       "performance",
       "profiling",
@@ -670,7 +670,7 @@
     "language": "cpp",
     "level": "avanzato",
     "duration": "45 min",
-    "url": "cpp/10-architetture-api.html",
+    "url": "cpp/10-architetture-api",
     "tags": [
       "api",
       "pattern",
@@ -685,7 +685,7 @@
     "language": "java",
     "level": "intermedio",
     "duration": "35 min",
-    "url": "java/07-generics-avanzati.html",
+    "url": "java/07-generics-avanzati",
     "tags": [
       "generics",
       "wildcard",
@@ -700,7 +700,7 @@
     "language": "java",
     "level": "avanzato",
     "duration": "40 min",
-    "url": "java/08-concorrenza.html",
+    "url": "java/08-concorrenza",
     "tags": [
       "executor",
       "thread",
@@ -715,7 +715,7 @@
     "language": "java",
     "level": "intermedio",
     "duration": "45 min",
-    "url": "java/09-rest-api.html",
+    "url": "java/09-rest-api",
     "tags": [
       "spring boot",
       "rest",
@@ -730,7 +730,7 @@
     "language": "java",
     "level": "avanzato",
     "duration": "45 min",
-    "url": "java/10-jvm-performance.html",
+    "url": "java/10-jvm-performance",
     "tags": [
       "jvm",
       "performance",
@@ -745,7 +745,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "35 min",
-    "url": "python/07-dataclass.html",
+    "url": "python/07-dataclass",
     "tags": [
       "dataclass",
       "typing",
@@ -760,7 +760,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "35 min",
-    "url": "python/08-logging.html",
+    "url": "python/08-logging",
     "tags": [
       "logging",
       "observability",
@@ -775,7 +775,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "40 min",
-    "url": "python/09-cli-tools.html",
+    "url": "python/09-cli-tools",
     "tags": [
       "cli",
       "automation",
@@ -790,7 +790,7 @@
     "language": "python",
     "level": "intermedio",
     "duration": "40 min",
-    "url": "python/10-packaging.html",
+    "url": "python/10-packaging",
     "tags": [
       "packaging",
       "release",
@@ -805,7 +805,7 @@
     "language": "sql",
     "level": "intermedio",
     "duration": "35 min",
-    "url": "sql/08-cte-recursive.html",
+    "url": "sql/08-cte-recursive",
     "tags": [
       "cte",
       "recursive",
@@ -820,7 +820,7 @@
     "language": "sql",
     "level": "intermedio",
     "duration": "30 min",
-    "url": "sql/09-views.html",
+    "url": "sql/09-views",
     "tags": [
       "views",
       "materialized",
@@ -835,7 +835,7 @@
     "language": "sql",
     "level": "intermedio",
     "duration": "35 min",
-    "url": "sql/10-security-roles.html",
+    "url": "sql/10-security-roles",
     "tags": [
       "security",
       "ruoli",
