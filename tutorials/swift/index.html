@@ -1,0 +1,327 @@
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="me" href="https://www.linkedin.com/in/buzatu/" />
+    <link rel="me" href="https://www.instagram.com/xvmir/" />
+<title>buzatu — swift</title>
+    <meta name="description" content="sviluppo iOS, swiftui, concurrency e api client in swift." />
+    <meta name="keywords" content="buzatu, samir buzatu, tutorial, programmazione, ai, cinema, fotografia, swift, ios, swiftui, concurrency" />
+    <meta name="author" content="samir buzatu" />
+    <meta name="publisher" content="buzatu" />
+    <meta name="application-name" content="buzatu" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:site_name" content="buzatu" />
+    <meta property="og:title" content="buzatu — swift essentials" />
+    <meta property="og:description" content="sviluppo iOS, swiftui, concurrency e api client in swift." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://buzatu.it/tutorials/swift/" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="buzatu — swift essentials" />
+    <meta name="twitter:description" content="sviluppo iOS, swiftui, concurrency e api client in swift." />
+    <meta property="og:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta name="twitter:image:alt" content="buzatu cinematic systems studio" />
+    <link rel="canonical" href="https://buzatu.it/tutorials/swift/" />
+    <link rel="icon" type="image/svg+xml" href="https://buzatu.it/assets/favicon.svg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://buzatu.it/sitemap.xml" />
+    <link rel="alternate" hreflang="it" href="https://buzatu.it/tutorials/swift/" />
+    <link rel="alternate" hreflang="x-default" href="https://buzatu.it/tutorials/swift/" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "email": "samir@buzatu.it", "address": {"@type": "PostalAddress", "addressLocality": "catania", "addressCountry": "it"}, "founder": {"@type": "Person", "name": "samir buzatu"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "potentialAction": {"@type": "SearchAction", "target": "https://buzatu.it/tutorials/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "buzatu — swift essentials", "description": "sviluppo iOS, swiftui, concurrency e api client in swift.", "url": "https://buzatu.it/tutorials/swift/", "isPartOf": {"@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it"}, "inLanguage": "it"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "tutorial swift", "description": "sviluppo iOS, swiftui, concurrency e api client in swift.", "url": "https://buzatu.it/tutorials/swift/", "hasPart": [{"@type": "LearningResource", "name": "fondamenti e sintassi", "url": "https://buzatu.it/tutorials/swift/01-fondamenti"}, {"@type": "LearningResource", "name": "collezioni e map", "url": "https://buzatu.it/tutorials/swift/02-collezioni"}, {"@type": "LearningResource", "name": "struct, classi e protocol", "url": "https://buzatu.it/tutorials/swift/03-struct-protocols"}, {"@type": "LearningResource", "name": "error handling", "url": "https://buzatu.it/tutorials/swift/04-error-handling"}, {"@type": "LearningResource", "name": "closures e functional", "url": "https://buzatu.it/tutorials/swift/05-closures"}, {"@type": "LearningResource", "name": "concurrency", "url": "https://buzatu.it/tutorials/swift/06-concurrency"}, {"@type": "LearningResource", "name": "codable e networking", "url": "https://buzatu.it/tutorials/swift/07-codable-network"}, {"@type": "LearningResource", "name": "swiftui essentials", "url": "https://buzatu.it/tutorials/swift/08-swiftui"}, {"@type": "LearningResource", "name": "testing e quality", "url": "https://buzatu.it/tutorials/swift/09-testing"}, {"@type": "LearningResource", "name": "architettura swift", "url": "https://buzatu.it/tutorials/swift/10-architecture"}], "inLanguage": "it"}</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">skip to content</a>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <p class="preloader-title">buzatu systems initializing</p>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-meta">
+          <span class="preloader-count" aria-live="polite">0%</span>
+          <span class="preloader-status">calibrating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="transition-layer" aria-hidden="true"></div>
+    <div class="ambient"></div>
+    <div class="scroll-progress"><span></span></div>
+
+    <div data-barba="wrapper">
+
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="buzatu home">
+          <span class="brand-mark">b</span>
+          <span class="brand-word">buzatu</span>
+        </a>
+        <nav class="site-nav" aria-label="primary">
+          <a class="nav-link" href="../../" data-nav="home">home</a>
+          <a class="nav-link" href="../../work" data-nav="work">work</a>
+          <a class="nav-link" href="../../photography" data-nav="photography">photography</a>
+          <a class="nav-link" href="../" data-nav="tutorials">tutorials</a>
+          <a class="nav-link" href="../../about" data-nav="about">about</a>
+        </nav>
+        <div class="nav-controls">
+          <span class="status-pill">availability: limited select briefs</span>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+          <div class="nav-overlay-top">
+            <p class="nav-overlay-label">menu</p>
+            <button class="nav-close" type="button">close</button>
+          </div>
+          <nav class="nav-overlay-links">
+            <a href="../../" data-nav="home">home</a>
+            <a href="../../work" data-nav="work">work</a>
+            <a href="../../photography" data-nav="photography">photography</a>
+            <a href="../" data-nav="tutorials">tutorials</a>
+            <a href="../../about" data-nav="about">about</a>
+          </nav>
+          <div class="nav-overlay-footer">
+            <p class="nav-overlay-text">samir@buzatu.it</p>
+            <div class="nav-overlay-meta">
+              <span>catania, italy</span>
+              <span>cinematic systems · ai · vfx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main data-barba="container" data-barba-namespace="swift" class="page" id="main-content">
+        <section class="page-hero tutorial-hero">
+          <nav class="breadcrumbs" data-animate="reveal">
+            <a href="../">tutorials</a>
+            <span>swift</span>
+          </nav>
+          <p class="eyebrow" data-animate="reveal">linguaggio apple</p>
+          <h1 class="page-title" data-animate="reveal">swift essentials</h1>
+          <p class="page-sub" data-animate="reveal">
+            sviluppo iOS moderno con swiftui, concurrency e api client puliti.
+          </p>
+          <div class="tutorial-tags" data-animate="reveal">
+            <span class="tag">livello: base → avanzato</span>
+            <span class="tag">tempo: 8 ore</span>
+            <span class="tag">output: app ios</span>
+          </div>
+        </section>
+
+        <section class="tutorial-layout">
+          <aside class="tutorial-aside" data-animate="reveal">
+            <h3>indice rapido</h3>
+            <ul class="toc">
+              <li><a href="#overview">perché swift</a></li>
+              <li><a href="#setup">setup</a></li>
+              <li><a href="#syntax">sintassi base</a></li>
+              <li><a href="#data">dati e funzioni</a></li>
+              <li><a href="#next">prossime lezioni</a></li>
+              <li><a href="#deep">approfondimenti</a></li>
+            </ul>
+          </aside>
+
+          <article class="tutorial-article">
+            <section id="overview" data-animate="reveal">
+              <h2>perché swift</h2>
+              <p>swift è il linguaggio di riferimento per l'ecosistema Apple: sintassi moderna, sicurezza e performance.</p>
+              <div class="callout">
+                <p>focus: ui, concurrency, networking e architettura.</p>
+              </div>
+            </section>
+
+            <section id="setup" data-animate="reveal">
+              <h2>setup</h2>
+              <p>installa xcode o swift toolchain e verifica la versione.</p>
+              <pre class="code-block"><code class="language-bash">swift --version
+swiftc main.swift -o app
+./app</code></pre>
+            </section>
+
+            <section id="syntax" data-animate="reveal">
+              <h2>sintassi base</h2>
+              <pre class="code-block"><code class="language-swift">let name = &quot;samir&quot;
+print(&quot;hello \(name)&quot;)</code></pre>
+              <p>swift usa type inference e string interpolation.</p>
+            </section>
+
+            <section id="data" data-animate="reveal">
+              <h2>dati e funzioni</h2>
+              <pre class="code-block"><code class="language-swift">func area(_ r: Double) -&gt; Double { 3.14 * r * r }
+let values = [1, 2, 3]</code></pre>
+              <p>funzioni pure e collezioni rendono il codice leggibile.</p>
+            </section>
+
+            <section id="next" data-animate="reveal">
+              <h2>prossime lezioni</h2>
+              <div class="lesson-grid">
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 01</p>
+                  <h3>fondamenti e sintassi</h3>
+                  <p>variabili, tipi, funzioni, optional e controllo di flusso.</p>
+                  <a class="text-link" href="01-fondamenti">apri</a>
+                </article>
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 02</p>
+                  <h3>collezioni e map</h3>
+                  <p>array, dictionary, filtri e iterazioni rapide.</p>
+                  <a class="text-link" href="02-collezioni">apri</a>
+                </article>
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 03</p>
+                  <h3>struct, classi e protocol</h3>
+                  <p>modelli dati, conformità e extension riusabili.</p>
+                  <a class="text-link" href="03-struct-protocols">apri</a>
+                </article>
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 04</p>
+                  <h3>error handling</h3>
+                  <p>errori, guard e strategie di recovery.</p>
+                  <a class="text-link" href="04-error-handling">apri</a>
+                </article>
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 05</p>
+                  <h3>closures e functional</h3>
+                  <p>closure, map/filter e composizione.</p>
+                  <a class="text-link" href="05-closures">apri</a>
+                </article>
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 06</p>
+                  <h3>concurrency</h3>
+                  <p>async/await, actor e task isolate.</p>
+                  <a class="text-link" href="06-concurrency">apri</a>
+                </article>
+              </div>
+            </section>
+
+            <section id="deep" data-animate="reveal">
+              <h2>approfondimenti</h2>
+              <p>lezioni avanzate per completare il percorso.</p>
+              <div class="lesson-grid">
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 07</p>
+                  <h3>codable e networking</h3>
+                  <p>decoding json e chiamate http.</p>
+                  <a class="text-link" href="07-codable-network">apri</a>
+                </article>
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 08</p>
+                  <h3>swiftui essentials</h3>
+                  <p>view, state e componenti riusabili.</p>
+                  <a class="text-link" href="08-swiftui">apri</a>
+                </article>
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 09</p>
+                  <h3>testing e quality</h3>
+                  <p>xctest, assert e qualità continua.</p>
+                  <a class="text-link" href="09-testing">apri</a>
+                </article>
+
+                <article class="lesson-card">
+                  <p class="lesson-label">lezione 10</p>
+                  <h3>architettura swift</h3>
+                  <p>mvvm, di e separazione layer.</p>
+                  <a class="text-link" href="10-architecture">apri</a>
+                </article>
+              </div>
+            </section>
+          </article>
+        </section>
+      </main>
+
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">buzatu</span>
+            <p class="footer-copy">cinematic systems studio blending ai, film, and art practice.</p>
+            <div class="footer-badges">
+              <span>ai</span>
+              <span>vfx</span>
+              <span>photography</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>navigate</h4>
+            <a href="../../">home</a>
+            <a href="../../work">work</a>
+            <a href="../../photography">photography</a>
+            <a href="../">tutorials</a>
+            <a href="../../about">about</a>
+          </div>
+          <div class="footer-col">
+            <h4>studio</h4>
+            <p>catania, italy</p>
+            <p>samir@buzatu.it</p>
+          </div>
+          <div class="footer-col">
+            <h4>signals</h4>
+            <p>subscribe for new drops and private previews.</p>
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="email" required />
+              <button type="submit">join</button>
+            </form>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/in/buzatu/" rel="me">linkedin</a>
+              <a href="https://www.instagram.com/xvmir/" rel="me">instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 buzatu</span>
+          <span>crafted in catania · cinematic dark mode</span>
+        </div>
+      </footer>
+    </div>
+
+    <a class="floating-cta" href="mailto:samir@buzatu.it">start a brief</a>
+    <button class="scroll-top" type="button">top</button>
+    <div class="toast" aria-live="polite"></div>
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button">close</button>
+      <img class="lightbox-image" alt="expanded photograph" />
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="../../script.js"></script>
+  </body>
+</html>
+

@@ -842,5 +842,1167 @@
       "auditing"
     ],
     "content": "gestione ruoli avanzata e audit log."
+  },
+  {
+    "id": "swift-index",
+    "title": "swift essentials",
+    "description": "sviluppo iOS, swiftui, concurrency e api client in swift.",
+    "language": "swift",
+    "level": "base → avanzato",
+    "duration": "8 ore",
+    "url": "swift/",
+    "tags": [
+      "swift",
+      "ios",
+      "swiftui",
+      "concurrency"
+    ],
+    "content": "swift è il linguaggio di riferimento per l'ecosistema Apple: sintassi moderna, sicurezza e performance."
+  },
+  {
+    "id": "swift-01",
+    "title": "fondamenti e sintassi",
+    "description": "variabili, tipi, funzioni, optional e controllo di flusso.",
+    "language": "swift",
+    "level": "base",
+    "duration": "20 min",
+    "url": "swift/01-fondamenti",
+    "tags": [
+      "swift",
+      "fondamenti",
+      "base"
+    ],
+    "content": "variabili, tipi, funzioni, optional e controllo di flusso."
+  },
+  {
+    "id": "swift-02",
+    "title": "collezioni e map",
+    "description": "array, dictionary, filtri e iterazioni rapide.",
+    "language": "swift",
+    "level": "base",
+    "duration": "22 min",
+    "url": "swift/02-collezioni",
+    "tags": [
+      "swift",
+      "collezioni",
+      "base"
+    ],
+    "content": "array, dictionary, filtri e iterazioni rapide."
+  },
+  {
+    "id": "swift-03",
+    "title": "struct, classi e protocol",
+    "description": "modelli dati, conformità e extension riusabili.",
+    "language": "swift",
+    "level": "intermedio",
+    "duration": "30 min",
+    "url": "swift/03-struct-protocols",
+    "tags": [
+      "swift",
+      "struct,",
+      "intermedio"
+    ],
+    "content": "modelli dati, conformità e extension riusabili."
+  },
+  {
+    "id": "swift-04",
+    "title": "error handling",
+    "description": "errori, guard e strategie di recovery.",
+    "language": "swift",
+    "level": "intermedio",
+    "duration": "25 min",
+    "url": "swift/04-error-handling",
+    "tags": [
+      "swift",
+      "error",
+      "intermedio"
+    ],
+    "content": "errori, guard e strategie di recovery."
+  },
+  {
+    "id": "swift-05",
+    "title": "closures e functional",
+    "description": "closure, map/filter e composizione.",
+    "language": "swift",
+    "level": "intermedio",
+    "duration": "28 min",
+    "url": "swift/05-closures",
+    "tags": [
+      "swift",
+      "closures",
+      "intermedio"
+    ],
+    "content": "closure, map/filter e composizione."
+  },
+  {
+    "id": "swift-06",
+    "title": "concurrency",
+    "description": "async/await, actor e task isolate.",
+    "language": "swift",
+    "level": "avanzato",
+    "duration": "35 min",
+    "url": "swift/06-concurrency",
+    "tags": [
+      "swift",
+      "concurrency",
+      "avanzato"
+    ],
+    "content": "async/await, actor e task isolate."
+  },
+  {
+    "id": "swift-07",
+    "title": "codable e networking",
+    "description": "decoding json e chiamate http.",
+    "language": "swift",
+    "level": "intermedio",
+    "duration": "32 min",
+    "url": "swift/07-codable-network",
+    "tags": [
+      "swift",
+      "codable",
+      "intermedio"
+    ],
+    "content": "decoding json e chiamate http."
+  },
+  {
+    "id": "swift-08",
+    "title": "swiftui essentials",
+    "description": "view, state e componenti riusabili.",
+    "language": "swift",
+    "level": "intermedio",
+    "duration": "30 min",
+    "url": "swift/08-swiftui",
+    "tags": [
+      "swift",
+      "swiftui",
+      "intermedio"
+    ],
+    "content": "view, state e componenti riusabili."
+  },
+  {
+    "id": "swift-09",
+    "title": "testing e quality",
+    "description": "xctest, assert e qualità continua.",
+    "language": "swift",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "swift/09-testing",
+    "tags": [
+      "swift",
+      "testing",
+      "intermedio"
+    ],
+    "content": "xctest, assert e qualità continua."
+  },
+  {
+    "id": "swift-10",
+    "title": "architettura swift",
+    "description": "mvvm, di e separazione layer.",
+    "language": "swift",
+    "level": "avanzato",
+    "duration": "38 min",
+    "url": "swift/10-architecture",
+    "tags": [
+      "swift",
+      "architettura",
+      "avanzato"
+    ],
+    "content": "mvvm, di e separazione layer."
+  },
+  {
+    "id": "kotlin-index",
+    "title": "kotlin essentials",
+    "description": "kotlin moderno per jvm e android con coroutines e tooling.",
+    "language": "kotlin",
+    "level": "base → avanzato",
+    "duration": "9 ore",
+    "url": "kotlin/",
+    "tags": [
+      "kotlin",
+      "jvm",
+      "android",
+      "coroutines"
+    ],
+    "content": "kotlin offre sintassi espressiva e sicurezza, perfetto per backend e mobile."
+  },
+  {
+    "id": "kotlin-01",
+    "title": "fondamenti kotlin",
+    "description": "val/var, funzioni, null safety e when.",
+    "language": "kotlin",
+    "level": "base",
+    "duration": "20 min",
+    "url": "kotlin/01-fondamenti",
+    "tags": [
+      "kotlin",
+      "fondamenti",
+      "base"
+    ],
+    "content": "val/var, funzioni, null safety e when."
+  },
+  {
+    "id": "kotlin-02",
+    "title": "collezioni e sequence",
+    "description": "list, map, sequence e trasformazioni.",
+    "language": "kotlin",
+    "level": "base",
+    "duration": "24 min",
+    "url": "kotlin/02-collezioni",
+    "tags": [
+      "kotlin",
+      "collezioni",
+      "base"
+    ],
+    "content": "list, map, sequence e trasformazioni."
+  },
+  {
+    "id": "kotlin-03",
+    "title": "classi e data class",
+    "description": "classi, data class, sealed class e extension.",
+    "language": "kotlin",
+    "level": "intermedio",
+    "duration": "28 min",
+    "url": "kotlin/03-classi-data",
+    "tags": [
+      "kotlin",
+      "classi",
+      "intermedio"
+    ],
+    "content": "classi, data class, sealed class e extension."
+  },
+  {
+    "id": "kotlin-04",
+    "title": "coroutines",
+    "description": "launch, async e flow per task concorrenti.",
+    "language": "kotlin",
+    "level": "avanzato",
+    "duration": "34 min",
+    "url": "kotlin/04-coroutines",
+    "tags": [
+      "kotlin",
+      "coroutines",
+      "avanzato"
+    ],
+    "content": "launch, async e flow per task concorrenti."
+  },
+  {
+    "id": "kotlin-05",
+    "title": "extensions e scope",
+    "description": "extension, let/apply e DSL leggere.",
+    "language": "kotlin",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "kotlin/05-extensions",
+    "tags": [
+      "kotlin",
+      "extensions",
+      "intermedio"
+    ],
+    "content": "extension, let/apply e DSL leggere."
+  },
+  {
+    "id": "kotlin-06",
+    "title": "error handling",
+    "description": "result, runCatching e fallback.",
+    "language": "kotlin",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "kotlin/06-error-handling",
+    "tags": [
+      "kotlin",
+      "error",
+      "intermedio"
+    ],
+    "content": "result, runCatching e fallback."
+  },
+  {
+    "id": "kotlin-07",
+    "title": "serialization",
+    "description": "kotlinx serialization e json.",
+    "language": "kotlin",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "kotlin/07-serialization",
+    "tags": [
+      "kotlin",
+      "serialization",
+      "intermedio"
+    ],
+    "content": "kotlinx serialization e json."
+  },
+  {
+    "id": "kotlin-08",
+    "title": "gradle e build",
+    "description": "build.gradle.kts, moduli e dipendenze.",
+    "language": "kotlin",
+    "level": "intermedio",
+    "duration": "25 min",
+    "url": "kotlin/08-gradle",
+    "tags": [
+      "kotlin",
+      "gradle",
+      "intermedio"
+    ],
+    "content": "build.gradle.kts, moduli e dipendenze."
+  },
+  {
+    "id": "kotlin-09",
+    "title": "testing",
+    "description": "test unitari con kotlin test.",
+    "language": "kotlin",
+    "level": "intermedio",
+    "duration": "20 min",
+    "url": "kotlin/09-testing",
+    "tags": [
+      "kotlin",
+      "testing",
+      "intermedio"
+    ],
+    "content": "test unitari con kotlin test."
+  },
+  {
+    "id": "kotlin-10",
+    "title": "architettura kotlin",
+    "description": "clean architecture e layer separati.",
+    "language": "kotlin",
+    "level": "avanzato",
+    "duration": "36 min",
+    "url": "kotlin/10-architecture",
+    "tags": [
+      "kotlin",
+      "architettura",
+      "avanzato"
+    ],
+    "content": "clean architecture e layer separati."
+  },
+  {
+    "id": "c-index",
+    "title": "c essentials",
+    "description": "linguaggio di sistema: memoria, moduli, build e processi.",
+    "language": "c",
+    "level": "base → avanzato",
+    "duration": "9 ore",
+    "url": "c/",
+    "tags": [
+      "c",
+      "sistemi",
+      "memoria",
+      "low-level"
+    ],
+    "content": "c è il linguaggio base per sistemi e performance: diretto e minimale."
+  },
+  {
+    "id": "c-01",
+    "title": "fondamenti c",
+    "description": "main, tipi base, io e compilazione.",
+    "language": "c",
+    "level": "base",
+    "duration": "22 min",
+    "url": "c/01-fondamenti",
+    "tags": [
+      "c",
+      "fondamenti",
+      "base"
+    ],
+    "content": "main, tipi base, io e compilazione."
+  },
+  {
+    "id": "c-02",
+    "title": "memoria e puntatori",
+    "description": "puntatori, array e malloc/free.",
+    "language": "c",
+    "level": "intermedio",
+    "duration": "30 min",
+    "url": "c/02-memoria",
+    "tags": [
+      "c",
+      "memoria",
+      "intermedio"
+    ],
+    "content": "puntatori, array e malloc/free."
+  },
+  {
+    "id": "c-03",
+    "title": "struct ed enum",
+    "description": "struct, enum e dati strutturati.",
+    "language": "c",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "c/03-struct",
+    "tags": [
+      "c",
+      "struct",
+      "intermedio"
+    ],
+    "content": "struct, enum e dati strutturati."
+  },
+  {
+    "id": "c-04",
+    "title": "funzioni e moduli",
+    "description": "funzioni, header e separazione file.",
+    "language": "c",
+    "level": "intermedio",
+    "duration": "28 min",
+    "url": "c/04-funzioni-moduli",
+    "tags": [
+      "c",
+      "funzioni",
+      "intermedio"
+    ],
+    "content": "funzioni, header e separazione file."
+  },
+  {
+    "id": "c-05",
+    "title": "file i/o",
+    "description": "lettura file, error handling e parsing.",
+    "language": "c",
+    "level": "intermedio",
+    "duration": "30 min",
+    "url": "c/05-file-io",
+    "tags": [
+      "c",
+      "file",
+      "intermedio"
+    ],
+    "content": "lettura file, error handling e parsing."
+  },
+  {
+    "id": "c-06",
+    "title": "makefile",
+    "description": "build automatizzate con make.",
+    "language": "c",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "c/06-makefile",
+    "tags": [
+      "c",
+      "makefile",
+      "intermedio"
+    ],
+    "content": "build automatizzate con make."
+  },
+  {
+    "id": "c-07",
+    "title": "debugging",
+    "description": "assert, gdb e diagnosi errori.",
+    "language": "c",
+    "level": "avanzato",
+    "duration": "26 min",
+    "url": "c/07-debugging",
+    "tags": [
+      "c",
+      "debugging",
+      "avanzato"
+    ],
+    "content": "assert, gdb e diagnosi errori."
+  },
+  {
+    "id": "c-08",
+    "title": "strutture dati",
+    "description": "liste, nodi e gestione memoria.",
+    "language": "c",
+    "level": "avanzato",
+    "duration": "34 min",
+    "url": "c/08-strutture-dati",
+    "tags": [
+      "c",
+      "strutture",
+      "avanzato"
+    ],
+    "content": "liste, nodi e gestione memoria."
+  },
+  {
+    "id": "c-09",
+    "title": "stringhe",
+    "description": "string.h, parsing e sicurezza.",
+    "language": "c",
+    "level": "intermedio",
+    "duration": "25 min",
+    "url": "c/09-stringhe",
+    "tags": [
+      "c",
+      "stringhe",
+      "intermedio"
+    ],
+    "content": "string.h, parsing e sicurezza."
+  },
+  {
+    "id": "c-10",
+    "title": "processi e pipe",
+    "description": "fork, exec e comunicazione base.",
+    "language": "c",
+    "level": "avanzato",
+    "duration": "32 min",
+    "url": "c/10-processi",
+    "tags": [
+      "c",
+      "processi",
+      "avanzato"
+    ],
+    "content": "fork, exec e comunicazione base."
+  },
+  {
+    "id": "rust-index",
+    "title": "rust essentials",
+    "description": "sicurezza della memoria, performance e tooling moderno.",
+    "language": "rust",
+    "level": "base → avanzato",
+    "duration": "9 ore",
+    "url": "rust/",
+    "tags": [
+      "rust",
+      "ownership",
+      "performance",
+      "sistemi"
+    ],
+    "content": "rust offre zero-cost abstractions e memory safety."
+  },
+  {
+    "id": "rust-01",
+    "title": "ownership",
+    "description": "ownership, mutabilità e borrowing.",
+    "language": "rust",
+    "level": "base",
+    "duration": "24 min",
+    "url": "rust/01-ownership",
+    "tags": [
+      "rust",
+      "ownership",
+      "base"
+    ],
+    "content": "ownership, mutabilità e borrowing."
+  },
+  {
+    "id": "rust-02",
+    "title": "borrowing",
+    "description": "reference, &mut e regole base.",
+    "language": "rust",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "rust/02-borrowing",
+    "tags": [
+      "rust",
+      "borrowing",
+      "intermedio"
+    ],
+    "content": "reference, &mut e regole base."
+  },
+  {
+    "id": "rust-03",
+    "title": "struct e enum",
+    "description": "struct, enum e match.",
+    "language": "rust",
+    "level": "intermedio",
+    "duration": "28 min",
+    "url": "rust/03-struct-enum",
+    "tags": [
+      "rust",
+      "struct",
+      "intermedio"
+    ],
+    "content": "struct, enum e match."
+  },
+  {
+    "id": "rust-04",
+    "title": "collections",
+    "description": "vec, hashmap e iterators.",
+    "language": "rust",
+    "level": "intermedio",
+    "duration": "30 min",
+    "url": "rust/04-collections",
+    "tags": [
+      "rust",
+      "collections",
+      "intermedio"
+    ],
+    "content": "vec, hashmap e iterators."
+  },
+  {
+    "id": "rust-05",
+    "title": "error handling",
+    "description": "result, option e match.",
+    "language": "rust",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "rust/05-error-handling",
+    "tags": [
+      "rust",
+      "error",
+      "intermedio"
+    ],
+    "content": "result, option e match."
+  },
+  {
+    "id": "rust-06",
+    "title": "traits e generics",
+    "description": "traits, bounds e codice riusabile.",
+    "language": "rust",
+    "level": "avanzato",
+    "duration": "32 min",
+    "url": "rust/06-traits-generics",
+    "tags": [
+      "rust",
+      "traits",
+      "avanzato"
+    ],
+    "content": "traits, bounds e codice riusabile."
+  },
+  {
+    "id": "rust-07",
+    "title": "moduli e crate",
+    "description": "mod, pub e cargo toml.",
+    "language": "rust",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "rust/07-modules-crate",
+    "tags": [
+      "rust",
+      "moduli",
+      "intermedio"
+    ],
+    "content": "mod, pub e cargo toml."
+  },
+  {
+    "id": "rust-08",
+    "title": "async",
+    "description": "async/await e task.",
+    "language": "rust",
+    "level": "avanzato",
+    "duration": "30 min",
+    "url": "rust/08-async",
+    "tags": [
+      "rust",
+      "async",
+      "avanzato"
+    ],
+    "content": "async/await e task."
+  },
+  {
+    "id": "rust-09",
+    "title": "testing",
+    "description": "test unitari con cargo test.",
+    "language": "rust",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "rust/09-testing",
+    "tags": [
+      "rust",
+      "testing",
+      "intermedio"
+    ],
+    "content": "test unitari con cargo test."
+  },
+  {
+    "id": "rust-10",
+    "title": "cli tools",
+    "description": "args, parsing e output.",
+    "language": "rust",
+    "level": "intermedio",
+    "duration": "28 min",
+    "url": "rust/10-cli",
+    "tags": [
+      "rust",
+      "cli",
+      "intermedio"
+    ],
+    "content": "args, parsing e output."
+  },
+  {
+    "id": "typescript-index",
+    "title": "typescript essentials",
+    "description": "typescript per frontend e backend con type safety e tooling.",
+    "language": "typescript",
+    "level": "base → avanzato",
+    "duration": "8 ore",
+    "url": "typescript/",
+    "tags": [
+      "typescript",
+      "types",
+      "frontend",
+      "backend"
+    ],
+    "content": "typescript aggiunge type safety a javascript e migliora il tooling."
+  },
+  {
+    "id": "typescript-01",
+    "title": "setup typescript",
+    "description": "tsconfig, tipi base e funzioni.",
+    "language": "typescript",
+    "level": "base",
+    "duration": "20 min",
+    "url": "typescript/01-setup",
+    "tags": [
+      "typescript",
+      "setup",
+      "base"
+    ],
+    "content": "tsconfig, tipi base e funzioni."
+  },
+  {
+    "id": "typescript-02",
+    "title": "types e interface",
+    "description": "interface, union e type narrowing.",
+    "language": "typescript",
+    "level": "base",
+    "duration": "22 min",
+    "url": "typescript/02-types",
+    "tags": [
+      "typescript",
+      "types",
+      "base"
+    ],
+    "content": "interface, union e type narrowing."
+  },
+  {
+    "id": "typescript-03",
+    "title": "funzioni e generics",
+    "description": "funzioni tipizzate e generics.",
+    "language": "typescript",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "typescript/03-funzioni",
+    "tags": [
+      "typescript",
+      "funzioni",
+      "intermedio"
+    ],
+    "content": "funzioni tipizzate e generics."
+  },
+  {
+    "id": "typescript-04",
+    "title": "classi e modelli",
+    "description": "classi, interface e moduli.",
+    "language": "typescript",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "typescript/04-classi",
+    "tags": [
+      "typescript",
+      "classi",
+      "intermedio"
+    ],
+    "content": "classi, interface e moduli."
+  },
+  {
+    "id": "typescript-05",
+    "title": "async e fetch",
+    "description": "promise, async/await e fetch.",
+    "language": "typescript",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "typescript/05-async",
+    "tags": [
+      "typescript",
+      "async",
+      "intermedio"
+    ],
+    "content": "promise, async/await e fetch."
+  },
+  {
+    "id": "typescript-06",
+    "title": "narrowing",
+    "description": "type guards e discriminated union.",
+    "language": "typescript",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "typescript/06-narrowing",
+    "tags": [
+      "typescript",
+      "narrowing",
+      "intermedio"
+    ],
+    "content": "type guards e discriminated union."
+  },
+  {
+    "id": "typescript-07",
+    "title": "moduli",
+    "description": "import/export e struttura progetto.",
+    "language": "typescript",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "typescript/07-moduli",
+    "tags": [
+      "typescript",
+      "moduli",
+      "intermedio"
+    ],
+    "content": "import/export e struttura progetto."
+  },
+  {
+    "id": "typescript-08",
+    "title": "api client",
+    "description": "fetch tipizzato e dto.",
+    "language": "typescript",
+    "level": "intermedio",
+    "duration": "28 min",
+    "url": "typescript/08-api",
+    "tags": [
+      "typescript",
+      "api",
+      "intermedio"
+    ],
+    "content": "fetch tipizzato e dto."
+  },
+  {
+    "id": "typescript-09",
+    "title": "tooling",
+    "description": "build, lint e scripts.",
+    "language": "typescript",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "typescript/09-tooling",
+    "tags": [
+      "typescript",
+      "tooling",
+      "intermedio"
+    ],
+    "content": "build, lint e scripts."
+  },
+  {
+    "id": "typescript-10",
+    "title": "architettura",
+    "description": "layer, dto e clean structure.",
+    "language": "typescript",
+    "level": "avanzato",
+    "duration": "30 min",
+    "url": "typescript/10-architecture",
+    "tags": [
+      "typescript",
+      "architettura",
+      "avanzato"
+    ],
+    "content": "layer, dto e clean structure."
+  },
+  {
+    "id": "csharp-index",
+    "title": "c# essentials",
+    "description": "c# e .net per backend, api e tooling moderno.",
+    "language": "csharp",
+    "level": "base → avanzato",
+    "duration": "9 ore",
+    "url": "csharp/",
+    "tags": [
+      "c#",
+      "dotnet",
+      "backend",
+      "api"
+    ],
+    "content": "c# è solido per backend scalabili con tooling .net."
+  },
+  {
+    "id": "csharp-01",
+    "title": "fondamenti c#",
+    "description": "dotnet cli, tipi, classi e collection.",
+    "language": "csharp",
+    "level": "base",
+    "duration": "22 min",
+    "url": "csharp/01-fondamenti",
+    "tags": [
+      "c#",
+      "fondamenti",
+      "base"
+    ],
+    "content": "dotnet cli, tipi, classi e collection."
+  },
+  {
+    "id": "csharp-02",
+    "title": "collections e linq",
+    "description": "list, linq e query rapide.",
+    "language": "csharp",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "csharp/02-collections-linq",
+    "tags": [
+      "c#",
+      "collections",
+      "intermedio"
+    ],
+    "content": "list, linq e query rapide."
+  },
+  {
+    "id": "csharp-03",
+    "title": "classi e record",
+    "description": "classi, record e modelli immutabili.",
+    "language": "csharp",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "csharp/03-classi-record",
+    "tags": [
+      "c#",
+      "classi",
+      "intermedio"
+    ],
+    "content": "classi, record e modelli immutabili."
+  },
+  {
+    "id": "csharp-04",
+    "title": "async/await",
+    "description": "task async e gestione errori.",
+    "language": "csharp",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "csharp/04-async-await",
+    "tags": [
+      "c#",
+      "async/await",
+      "intermedio"
+    ],
+    "content": "task async e gestione errori."
+  },
+  {
+    "id": "csharp-05",
+    "title": "error handling",
+    "description": "try/catch, using e cleanup.",
+    "language": "csharp",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "csharp/05-error-handling",
+    "tags": [
+      "c#",
+      "error",
+      "intermedio"
+    ],
+    "content": "try/catch, using e cleanup."
+  },
+  {
+    "id": "csharp-06",
+    "title": "dependency injection",
+    "description": "interfacce e servizi.",
+    "language": "csharp",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "csharp/06-dependency-injection",
+    "tags": [
+      "c#",
+      "dependency",
+      "intermedio"
+    ],
+    "content": "interfacce e servizi."
+  },
+  {
+    "id": "csharp-07",
+    "title": "data access",
+    "description": "connessioni, comandi e query.",
+    "language": "csharp",
+    "level": "intermedio",
+    "duration": "26 min",
+    "url": "csharp/07-data-access",
+    "tags": [
+      "c#",
+      "data",
+      "intermedio"
+    ],
+    "content": "connessioni, comandi e query."
+  },
+  {
+    "id": "csharp-08",
+    "title": "web api",
+    "description": "minimal api e endpoint.",
+    "language": "csharp",
+    "level": "intermedio",
+    "duration": "28 min",
+    "url": "csharp/08-web-api",
+    "tags": [
+      "c#",
+      "web",
+      "intermedio"
+    ],
+    "content": "minimal api e endpoint."
+  },
+  {
+    "id": "csharp-09",
+    "title": "testing",
+    "description": "xunit e assert affidabili.",
+    "language": "csharp",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "csharp/09-testing",
+    "tags": [
+      "c#",
+      "testing",
+      "intermedio"
+    ],
+    "content": "xunit e assert affidabili."
+  },
+  {
+    "id": "csharp-10",
+    "title": "architettura",
+    "description": "layer, dto e solid.",
+    "language": "csharp",
+    "level": "avanzato",
+    "duration": "30 min",
+    "url": "csharp/10-architecture",
+    "tags": [
+      "c#",
+      "architettura",
+      "avanzato"
+    ],
+    "content": "layer, dto e solid."
+  },
+  {
+    "id": "javascript-index",
+    "title": "javascript essentials",
+    "description": "javascript moderno per web, dom, async e tooling.",
+    "language": "javascript",
+    "level": "base → avanzato",
+    "duration": "8 ore",
+    "url": "javascript/",
+    "tags": [
+      "javascript",
+      "web",
+      "dom",
+      "async"
+    ],
+    "content": "javascript è il cuore del web: dinamico e multipiattaforma."
+  },
+  {
+    "id": "javascript-01",
+    "title": "fondamenti javascript",
+    "description": "const/let, funzioni e oggetti.",
+    "language": "javascript",
+    "level": "base",
+    "duration": "18 min",
+    "url": "javascript/01-fondamenti",
+    "tags": [
+      "javascript",
+      "fondamenti",
+      "base"
+    ],
+    "content": "const/let, funzioni e oggetti."
+  },
+  {
+    "id": "javascript-02",
+    "title": "objects e arrays",
+    "description": "map/filter e destructuring.",
+    "language": "javascript",
+    "level": "base",
+    "duration": "20 min",
+    "url": "javascript/02-objects-arrays",
+    "tags": [
+      "javascript",
+      "objects",
+      "base"
+    ],
+    "content": "map/filter e destructuring."
+  },
+  {
+    "id": "javascript-03",
+    "title": "dom e eventi",
+    "description": "query selector, eventi e update UI.",
+    "language": "javascript",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "javascript/03-dom",
+    "tags": [
+      "javascript",
+      "dom",
+      "intermedio"
+    ],
+    "content": "query selector, eventi e update UI."
+  },
+  {
+    "id": "javascript-04",
+    "title": "async e fetch",
+    "description": "promise, async/await e fetch.",
+    "language": "javascript",
+    "level": "intermedio",
+    "duration": "24 min",
+    "url": "javascript/04-async",
+    "tags": [
+      "javascript",
+      "async",
+      "intermedio"
+    ],
+    "content": "promise, async/await e fetch."
+  },
+  {
+    "id": "javascript-05",
+    "title": "classi",
+    "description": "classi, prototipi e composizione.",
+    "language": "javascript",
+    "level": "intermedio",
+    "duration": "22 min",
+    "url": "javascript/05-classes",
+    "tags": [
+      "javascript",
+      "classi",
+      "intermedio"
+    ],
+    "content": "classi, prototipi e composizione."
+  },
+  {
+    "id": "javascript-06",
+    "title": "moduli",
+    "description": "import/export e struttura codice.",
+    "language": "javascript",
+    "level": "intermedio",
+    "duration": "20 min",
+    "url": "javascript/06-modules",
+    "tags": [
+      "javascript",
+      "moduli",
+      "intermedio"
+    ],
+    "content": "import/export e struttura codice."
+  },
+  {
+    "id": "javascript-07",
+    "title": "tooling",
+    "description": "npm scripts e workflow.",
+    "language": "javascript",
+    "level": "intermedio",
+    "duration": "18 min",
+    "url": "javascript/07-tooling",
+    "tags": [
+      "javascript",
+      "tooling",
+      "intermedio"
+    ],
+    "content": "npm scripts e workflow."
+  },
+  {
+    "id": "javascript-08",
+    "title": "testing",
+    "description": "node:test e assert base.",
+    "language": "javascript",
+    "level": "intermedio",
+    "duration": "20 min",
+    "url": "javascript/08-testing",
+    "tags": [
+      "javascript",
+      "testing",
+      "intermedio"
+    ],
+    "content": "node:test e assert base."
+  },
+  {
+    "id": "javascript-09",
+    "title": "performance",
+    "description": "debounce e gestione eventi.",
+    "language": "javascript",
+    "level": "intermedio",
+    "duration": "20 min",
+    "url": "javascript/09-performance",
+    "tags": [
+      "javascript",
+      "performance",
+      "intermedio"
+    ],
+    "content": "debounce e gestione eventi."
+  },
+  {
+    "id": "javascript-10",
+    "title": "architettura",
+    "description": "state, moduli e pattern.",
+    "language": "javascript",
+    "level": "avanzato",
+    "duration": "26 min",
+    "url": "javascript/10-architecture",
+    "tags": [
+      "javascript",
+      "architettura",
+      "avanzato"
+    ],
+    "content": "state, moduli e pattern."
   }
 ]

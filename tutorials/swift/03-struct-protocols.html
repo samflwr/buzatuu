@@ -1,0 +1,337 @@
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="me" href="https://www.linkedin.com/in/buzatu/" />
+    <link rel="me" href="https://www.instagram.com/xvmir/" />
+<title>buzatu — struct, classi e protocol swift</title>
+    <meta name="description" content="modelli dati, conformità e extension riusabili." />
+    <meta name="keywords" content="buzatu, samir buzatu, tutorial, programmazione, ai, cinema, fotografia, swift, extensions, classi, struct, protocol" />
+    <meta name="author" content="samir buzatu" />
+    <meta name="publisher" content="buzatu" />
+    <meta name="application-name" content="buzatu" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:site_name" content="buzatu" />
+    <meta property="og:title" content="buzatu — struct, classi e protocol swift" />
+    <meta property="og:description" content="modelli dati, conformità e extension riusabili." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://buzatu.it/tutorials/swift/03-struct-protocols" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="buzatu — struct, classi e protocol swift" />
+    <meta name="twitter:description" content="modelli dati, conformità e extension riusabili." />
+    <meta property="og:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta name="twitter:image:alt" content="buzatu cinematic systems studio" />
+    <link rel="canonical" href="https://buzatu.it/tutorials/swift/03-struct-protocols" />
+    <link rel="icon" type="image/svg+xml" href="https://buzatu.it/assets/favicon.svg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://buzatu.it/sitemap.xml" />
+    <link rel="alternate" hreflang="it" href="https://buzatu.it/tutorials/swift/03-struct-protocols" />
+    <link rel="alternate" hreflang="x-default" href="https://buzatu.it/tutorials/swift/03-struct-protocols" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "potentialAction": {"@type": "SearchAction", "target": "https://buzatu.it/tutorials/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "buzatu — struct, classi e protocol swift", "description": "modelli dati, conformità e extension riusabili.", "url": "https://buzatu.it/tutorials/swift/03-struct-protocols", "isPartOf": {"@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it"}, "inLanguage": "it"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "struct, classi e protocol swift", "description": "modelli dati, conformità e extension riusabili.", "url": "https://buzatu.it/tutorials/swift/03-struct-protocols", "learningResourceType": "tutorial", "educationalLevel": "intermedio", "inLanguage": "it", "creator": {"@type": "Person", "name": "samir buzatu"}, "about": ["struct e proprietà", "classi e init", "protocol e conformità", "extensions"], "keywords": "struct e proprietà, classi e init, protocol e conformità, extensions", "educationalUse": "tutorial", "timeRequired": "PT30M", "isPartOf": {"@type": "CollectionPage", "name": "tutorial swift", "url": "https://buzatu.it/tutorials/swift/"}}</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "home", "item": "https://buzatu.it/"}, {"@type": "ListItem", "position": 2, "name": "tutorials", "item": "https://buzatu.it/tutorials/"}, {"@type": "ListItem", "position": 3, "name": "swift", "item": "https://buzatu.it/tutorials/swift/"}, {"@type": "ListItem", "position": 4, "name": "struct, classi e protocol", "item": "https://buzatu.it/tutorials/swift/03-struct-protocols"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "email": "samir@buzatu.it", "address": {"@type": "PostalAddress", "addressLocality": "catania", "addressCountry": "it"}, "founder": {"@type": "Person", "name": "samir buzatu"}}</script>
+</head>
+  <body>
+    <a class="skip-link" href="#main-content">skip to content</a>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <p class="preloader-title">buzatu systems initializing</p>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-meta">
+          <span class="preloader-count" aria-live="polite">0%</span>
+          <span class="preloader-status">calibrating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="transition-layer" aria-hidden="true"></div>
+    <div class="ambient"></div>
+    <div class="scroll-progress"><span></span></div>
+
+    <div data-barba="wrapper">
+
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="buzatu home">
+          <span class="brand-mark">b</span>
+          <span class="brand-word">buzatu</span>
+        </a>
+        <nav class="site-nav" aria-label="primary">
+          <a class="nav-link" href="../../" data-nav="home">home</a>
+          <a class="nav-link" href="../../work" data-nav="work">work</a>
+          <a class="nav-link" href="../../photography" data-nav="photography">photography</a>
+          <a class="nav-link" href="../" data-nav="tutorials">tutorials</a>
+          <a class="nav-link" href="../../about" data-nav="about">about</a>
+        </nav>
+        <div class="nav-controls">
+          <span class="status-pill">availability: limited select briefs</span>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+          <div class="nav-overlay-top">
+            <p class="nav-overlay-label">menu</p>
+            <button class="nav-close" type="button">close</button>
+          </div>
+          <nav class="nav-overlay-links">
+            <a href="../../" data-nav="home">home</a>
+            <a href="../../work" data-nav="work">work</a>
+            <a href="../../photography" data-nav="photography">photography</a>
+            <a href="../" data-nav="tutorials">tutorials</a>
+            <a href="../../about" data-nav="about">about</a>
+          </nav>
+          <div class="nav-overlay-footer">
+            <p class="nav-overlay-text">samir@buzatu.it</p>
+            <div class="nav-overlay-meta">
+              <span>catania, italy</span>
+              <span>cinematic systems · ai · vfx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main data-barba="container" data-barba-namespace="swift-03-struct-protocols" class="page" id="main-content">
+        <section class="page-hero tutorial-hero">
+          <nav class="breadcrumbs" data-animate="reveal">
+            <a href="../">tutorials</a>
+            <a href="/">swift</a>
+            <span>struct,</span>
+          </nav>
+          <p class="eyebrow" data-animate="reveal">lezione 03</p>
+          <h1 class="page-title" data-animate="reveal">struct, classi e protocol</h1>
+          <p class="page-sub" data-animate="reveal">modelli dati, conformità e extension riusabili.</p>
+          <div class="tutorial-tags" data-animate="reveal">
+            <span class="tag">livello: intermedio</span>
+            <span class="tag">durata: 30 min</span>
+            <span class="tag">output: modelli solidi</span>
+            <span class="tag">badge: swift essentials</span>
+</div>
+        </section>
+
+        <section class="tutorial-layout">
+          <aside class="tutorial-aside" data-animate="reveal">
+            <h3>indice</h3>
+            <ul class="toc">
+              <li><a href="#struct">struct e proprietà</a></li>
+              <li><a href="#classi">classi e init</a></li>
+              <li><a href="#protocol">protocol e conformità</a></li>
+              <li><a href="#extensions">extensions</a></li>
+
+              <li><a href="#exercise">esercizi</a></li>
+              <li><a href="#panoramica">panoramica</a></li>
+              <li><a href="#obiettivi">obiettivi</a></li>
+              <li><a href="#scheda-rapida">scheda rapida</a></li>
+              <li><a href="#tips">tips</a></li>
+              <li><a href="#mini-progetto">mini progetto</a></li>
+              <li><a href="#checklist">checklist</a></li>
+            </ul>
+          </aside>
+
+          <article class="tutorial-article">
+
+            <section id="struct" data-animate="reveal">
+              <h2>struct e proprietà</h2>
+              <pre class="code-block"><code class="language-swift">struct Project {
+  let name: String
+  var shots: Int
+}
+var p = Project(name: &quot;Nova&quot;, shots: 12)
+p.shots += 1</code></pre>
+              
+            </section>
+
+            <section id="classi" data-animate="reveal">
+              <h2>classi e init</h2>
+              <pre class="code-block"><code class="language-swift">class Camera {
+  let model: String
+  init(model: String) { self.model = model }
+}
+let cam = Camera(model: &quot;A7S&quot;)</code></pre>
+              
+            </section>
+
+            <section id="protocol" data-animate="reveal">
+              <h2>protocol e conformità</h2>
+              <pre class="code-block"><code class="language-swift">protocol Renderable { func render() -&gt; String }
+struct Scene: Renderable {
+  let name: String
+  func render() -&gt; String { &quot;scene \(name)&quot; }
+}</code></pre>
+              
+            </section>
+
+            <section id="extensions" data-animate="reveal">
+              <h2>extensions</h2>
+              <pre class="code-block"><code class="language-swift">extension String {
+  var slug: String { lowercased().replacingOccurrences(of: &quot; &quot;, with: &quot;-&quot;) }
+}
+print(&quot;Hello World&quot;.slug)</code></pre>
+              
+            </section>
+
+            <section id="exercise" data-animate="reveal">
+              <h2>esercizi</h2>
+              <p>crea un array di elementi e trasformalo con map.</p>
+              <pre class="code-block"><code class="language-swift">struct Item { let id: Int; let name: String }
+let items = [Item(id: 1, name: &quot;A&quot;), Item(id: 2, name: &quot;B&quot;)]
+let names = items.map { $0.name }
+print(names)</code></pre>
+            </section>
+          
+            <section id="panoramica" data-animate="reveal">
+              <h2>panoramica</h2>
+              <p>In questo capitolo su struct, classi e protocol lavoriamo su struct e proprietà, classi e init, protocol e conformità, extensions per creare micro-pattern riutilizzabili.</p>
+              <p>lavora in sequenza: leggi, prova, modifica gli snippet e annota i trade-off principali.</p>
+              <div class="callout">
+                <p>badge: swift essentials</p>
+              </div>
+            </section>
+
+            <section id="obiettivi" data-animate="reveal">
+              <h2>obiettivi</h2>
+              <ul class="bullet-list">
+                <li>capire e applicare struct e proprietà in uno scenario reale</li>
+                <li>capire e applicare classi e init in uno scenario reale</li>
+                <li>capire e applicare protocol e conformità in uno scenario reale</li>
+                <li>capire e applicare extensions in uno scenario reale</li>
+              </ul>
+            </section>
+
+            <section id="scheda-rapida" data-animate="reveal">
+              <h2>scheda rapida</h2>
+              <pre class="code-block"><code class="language-swift">struct Project {
+  let name: String
+  var shots: Int
+}
+var p = Project(name: &quot;Nova&quot;, shots: 12)
+p.shots += 1</code></pre>
+              <p>adatta questo scheletro agli esempi della lezione.</p>
+            </section>
+
+            <section id="tips" data-animate="reveal">
+              <h2>tips</h2>
+              <ul class="bullet-list">
+                <li>preferisci value types quando possibile</li>
+                <li>usa guard per early exit</li>
+                <li>mantieni le view leggere</li>
+                <li>separa networking e ui</li>
+                <li>scrivi test su logica critica</li>
+                <li>mantieni struct e proprietà leggibile</li>
+              </ul>
+              <div class="callout">
+                <p>tip: documenta ogni scelta architetturale.</p>
+              </div>
+            </section>
+
+            <section id="mini-progetto" data-animate="reveal">
+              <h2>mini progetto</h2>
+              <p>crea un tracker di progetti con struct e collezioni.</p>
+              <ul class="bullet-list">
+                <li>definisci Project</li>
+                <li>aggiungi array di Project</li>
+                <li>filtra e stampa</li>
+              </ul>
+              <p>output atteso: lista progetti filtrata.</p>
+            </section>
+
+            <section id="checklist" data-animate="reveal">
+              <h2>checklist</h2>
+              <ul class="bullet-list">
+                <li>ho eseguito gli snippet e controllato l'output</li>
+                <li>ho annotato almeno 2 trade-off</li>
+                <li>ho completato il mini progetto</li>
+                <li>ho salvato un riepilogo personale</li>
+              </ul>
+            </section>
+          </article>
+        </section>
+      </main>
+
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">buzatu</span>
+            <p class="footer-copy">cinematic systems studio blending ai, film, and art practice.</p>
+            <div class="footer-badges">
+              <span>ai</span>
+              <span>vfx</span>
+              <span>photography</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>navigate</h4>
+            <a href="../../">home</a>
+            <a href="../../work">work</a>
+            <a href="../../photography">photography</a>
+            <a href="../">tutorials</a>
+            <a href="../../about">about</a>
+          </div>
+          <div class="footer-col">
+            <h4>studio</h4>
+            <p>catania, italy</p>
+            <p>samir@buzatu.it</p>
+          </div>
+          <div class="footer-col">
+            <h4>signals</h4>
+            <p>subscribe for new drops and private previews.</p>
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="email" required />
+              <button type="submit">join</button>
+            </form>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/in/buzatu/" rel="me">linkedin</a>
+              <a href="https://www.instagram.com/xvmir/" rel="me">instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 buzatu</span>
+          <span>crafted in catania · cinematic dark mode</span>
+        </div>
+      </footer>
+    </div>
+
+    <a class="floating-cta" href="mailto:samir@buzatu.it">start a brief</a>
+    <button class="scroll-top" type="button">top</button>
+    <div class="toast" aria-live="polite"></div>
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button">close</button>
+      <img class="lightbox-image" alt="expanded photograph" />
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="../../script.js"></script>
+  </body>
+</html>
+

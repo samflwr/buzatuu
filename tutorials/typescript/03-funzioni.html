@@ -1,0 +1,319 @@
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="me" href="https://www.linkedin.com/in/buzatu/" />
+    <link rel="me" href="https://www.instagram.com/xvmir/" />
+<title>buzatu — funzioni e generics typescript</title>
+    <meta name="description" content="funzioni tipizzate e generics." />
+    <meta name="keywords" content="buzatu, samir buzatu, tutorial, programmazione, ai, cinema, fotografia, typescript, tipi, union, funzioni, generics" />
+    <meta name="author" content="samir buzatu" />
+    <meta name="publisher" content="buzatu" />
+    <meta name="application-name" content="buzatu" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:site_name" content="buzatu" />
+    <meta property="og:title" content="buzatu — funzioni e generics typescript" />
+    <meta property="og:description" content="funzioni tipizzate e generics." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://buzatu.it/tutorials/typescript/03-funzioni" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="buzatu — funzioni e generics typescript" />
+    <meta name="twitter:description" content="funzioni tipizzate e generics." />
+    <meta property="og:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta name="twitter:image:alt" content="buzatu cinematic systems studio" />
+    <link rel="canonical" href="https://buzatu.it/tutorials/typescript/03-funzioni" />
+    <link rel="icon" type="image/svg+xml" href="https://buzatu.it/assets/favicon.svg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://buzatu.it/sitemap.xml" />
+    <link rel="alternate" hreflang="it" href="https://buzatu.it/tutorials/typescript/03-funzioni" />
+    <link rel="alternate" hreflang="x-default" href="https://buzatu.it/tutorials/typescript/03-funzioni" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "potentialAction": {"@type": "SearchAction", "target": "https://buzatu.it/tutorials/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "buzatu — funzioni e generics typescript", "description": "funzioni tipizzate e generics.", "url": "https://buzatu.it/tutorials/typescript/03-funzioni", "isPartOf": {"@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it"}, "inLanguage": "it"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "funzioni e generics typescript", "description": "funzioni tipizzate e generics.", "url": "https://buzatu.it/tutorials/typescript/03-funzioni", "learningResourceType": "tutorial", "educationalLevel": "intermedio", "inLanguage": "it", "creator": {"@type": "Person", "name": "samir buzatu"}, "about": ["function types", "generics", "tipi base", "union types"], "keywords": "function types, generics, tipi base, union types", "educationalUse": "tutorial", "timeRequired": "PT24M", "isPartOf": {"@type": "CollectionPage", "name": "tutorial typescript", "url": "https://buzatu.it/tutorials/typescript/"}}</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "home", "item": "https://buzatu.it/"}, {"@type": "ListItem", "position": 2, "name": "tutorials", "item": "https://buzatu.it/tutorials/"}, {"@type": "ListItem", "position": 3, "name": "typescript", "item": "https://buzatu.it/tutorials/typescript/"}, {"@type": "ListItem", "position": 4, "name": "funzioni e generics", "item": "https://buzatu.it/tutorials/typescript/03-funzioni"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "email": "samir@buzatu.it", "address": {"@type": "PostalAddress", "addressLocality": "catania", "addressCountry": "it"}, "founder": {"@type": "Person", "name": "samir buzatu"}}</script>
+</head>
+  <body>
+    <a class="skip-link" href="#main-content">skip to content</a>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <p class="preloader-title">buzatu systems initializing</p>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-meta">
+          <span class="preloader-count" aria-live="polite">0%</span>
+          <span class="preloader-status">calibrating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="transition-layer" aria-hidden="true"></div>
+    <div class="ambient"></div>
+    <div class="scroll-progress"><span></span></div>
+
+    <div data-barba="wrapper">
+
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="buzatu home">
+          <span class="brand-mark">b</span>
+          <span class="brand-word">buzatu</span>
+        </a>
+        <nav class="site-nav" aria-label="primary">
+          <a class="nav-link" href="../../" data-nav="home">home</a>
+          <a class="nav-link" href="../../work" data-nav="work">work</a>
+          <a class="nav-link" href="../../photography" data-nav="photography">photography</a>
+          <a class="nav-link" href="../" data-nav="tutorials">tutorials</a>
+          <a class="nav-link" href="../../about" data-nav="about">about</a>
+        </nav>
+        <div class="nav-controls">
+          <span class="status-pill">availability: limited select briefs</span>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+          <div class="nav-overlay-top">
+            <p class="nav-overlay-label">menu</p>
+            <button class="nav-close" type="button">close</button>
+          </div>
+          <nav class="nav-overlay-links">
+            <a href="../../" data-nav="home">home</a>
+            <a href="../../work" data-nav="work">work</a>
+            <a href="../../photography" data-nav="photography">photography</a>
+            <a href="../" data-nav="tutorials">tutorials</a>
+            <a href="../../about" data-nav="about">about</a>
+          </nav>
+          <div class="nav-overlay-footer">
+            <p class="nav-overlay-text">samir@buzatu.it</p>
+            <div class="nav-overlay-meta">
+              <span>catania, italy</span>
+              <span>cinematic systems · ai · vfx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main data-barba="container" data-barba-namespace="typescript-03-funzioni" class="page" id="main-content">
+        <section class="page-hero tutorial-hero">
+          <nav class="breadcrumbs" data-animate="reveal">
+            <a href="../">tutorials</a>
+            <a href="/">typescript</a>
+            <span>funzioni</span>
+          </nav>
+          <p class="eyebrow" data-animate="reveal">lezione 03</p>
+          <h1 class="page-title" data-animate="reveal">funzioni e generics</h1>
+          <p class="page-sub" data-animate="reveal">funzioni tipizzate e generics.</p>
+          <div class="tutorial-tags" data-animate="reveal">
+            <span class="tag">livello: intermedio</span>
+            <span class="tag">durata: 24 min</span>
+            <span class="tag">output: api type-safe</span>
+            <span class="tag">badge: typescript essentials</span>
+</div>
+        </section>
+
+        <section class="tutorial-layout">
+          <aside class="tutorial-aside" data-animate="reveal">
+            <h3>indice</h3>
+            <ul class="toc">
+              <li><a href="#funzioni">function types</a></li>
+              <li><a href="#generics">generics</a></li>
+              <li><a href="#tipi">tipi base</a></li>
+              <li><a href="#union">union types</a></li>
+
+              <li><a href="#exercise">esercizi</a></li>
+              <li><a href="#panoramica">panoramica</a></li>
+              <li><a href="#obiettivi">obiettivi</a></li>
+              <li><a href="#scheda-rapida">scheda rapida</a></li>
+              <li><a href="#tips">tips</a></li>
+              <li><a href="#mini-progetto">mini progetto</a></li>
+              <li><a href="#checklist">checklist</a></li>
+            </ul>
+          </aside>
+
+          <article class="tutorial-article">
+
+            <section id="funzioni" data-animate="reveal">
+              <h2>function types</h2>
+              <pre class="code-block"><code class="language-typescript">type Fn = (a: number, b: number) =&gt; number;
+const add: Fn = (a, b) =&gt; a + b;</code></pre>
+              
+            </section>
+
+            <section id="generics" data-animate="reveal">
+              <h2>generics</h2>
+              <pre class="code-block"><code class="language-typescript">function wrap&lt;T&gt;(value: T): T[] { return [value]; }</code></pre>
+              
+            </section>
+
+            <section id="tipi" data-animate="reveal">
+              <h2>tipi base</h2>
+              <pre class="code-block"><code class="language-typescript">let year: number = 2026;
+let name: string = &quot;Samir&quot;;</code></pre>
+              
+            </section>
+
+            <section id="union" data-animate="reveal">
+              <h2>union types</h2>
+              <pre class="code-block"><code class="language-typescript">type Id = string | number;</code></pre>
+              
+            </section>
+
+            <section id="exercise" data-animate="reveal">
+              <h2>esercizi</h2>
+              <p>definisci un type e mappa un array.</p>
+              <pre class="code-block"><code class="language-typescript">type Item = { id: number; name: string };
+const items: Item[] = [{ id: 1, name: &quot;A&quot; }];
+const names = items.map(i =&gt; i.name);
+console.log(names);</code></pre>
+            </section>
+          
+            <section id="panoramica" data-animate="reveal">
+              <h2>panoramica</h2>
+              <p>In questo capitolo su funzioni e generics lavoriamo su function types, generics, tipi base, union types per creare micro-pattern riutilizzabili.</p>
+              <p>lavora in sequenza: leggi, prova, modifica gli snippet e annota i trade-off principali.</p>
+              <div class="callout">
+                <p>badge: typescript essentials</p>
+              </div>
+            </section>
+
+            <section id="obiettivi" data-animate="reveal">
+              <h2>obiettivi</h2>
+              <ul class="bullet-list">
+                <li>capire e applicare function types in uno scenario reale</li>
+                <li>capire e applicare generics in uno scenario reale</li>
+                <li>capire e applicare tipi base in uno scenario reale</li>
+                <li>capire e applicare union types in uno scenario reale</li>
+              </ul>
+            </section>
+
+            <section id="scheda-rapida" data-animate="reveal">
+              <h2>scheda rapida</h2>
+              <pre class="code-block"><code class="language-typescript">type Fn = (a: number, b: number) =&gt; number;
+const add: Fn = (a, b) =&gt; a + b;</code></pre>
+              <p>adatta questo scheletro agli esempi della lezione.</p>
+            </section>
+
+            <section id="tips" data-animate="reveal">
+              <h2>tips</h2>
+              <ul class="bullet-list">
+                <li>attiva strict</li>
+                <li>evita any</li>
+                <li>usa type alias chiari</li>
+                <li>separa layer e dto</li>
+                <li>mantieni funzioni pure</li>
+                <li>mantieni function types leggibile</li>
+              </ul>
+              <div class="callout">
+                <p>tip: documenta ogni scelta architetturale.</p>
+              </div>
+            </section>
+
+            <section id="mini-progetto" data-animate="reveal">
+              <h2>mini progetto</h2>
+              <p>crea un array tipizzato e trasformalo.</p>
+              <ul class="bullet-list">
+                <li>definisci type</li>
+                <li>crea array</li>
+                <li>map</li>
+              </ul>
+              <p>output atteso: output tipizzato.</p>
+            </section>
+
+            <section id="checklist" data-animate="reveal">
+              <h2>checklist</h2>
+              <ul class="bullet-list">
+                <li>ho eseguito gli snippet e controllato l'output</li>
+                <li>ho annotato almeno 2 trade-off</li>
+                <li>ho completato il mini progetto</li>
+                <li>ho salvato un riepilogo personale</li>
+              </ul>
+            </section>
+          </article>
+        </section>
+      </main>
+
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">buzatu</span>
+            <p class="footer-copy">cinematic systems studio blending ai, film, and art practice.</p>
+            <div class="footer-badges">
+              <span>ai</span>
+              <span>vfx</span>
+              <span>photography</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>navigate</h4>
+            <a href="../../">home</a>
+            <a href="../../work">work</a>
+            <a href="../../photography">photography</a>
+            <a href="../">tutorials</a>
+            <a href="../../about">about</a>
+          </div>
+          <div class="footer-col">
+            <h4>studio</h4>
+            <p>catania, italy</p>
+            <p>samir@buzatu.it</p>
+          </div>
+          <div class="footer-col">
+            <h4>signals</h4>
+            <p>subscribe for new drops and private previews.</p>
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="email" required />
+              <button type="submit">join</button>
+            </form>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/in/buzatu/" rel="me">linkedin</a>
+              <a href="https://www.instagram.com/xvmir/" rel="me">instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 buzatu</span>
+          <span>crafted in catania · cinematic dark mode</span>
+        </div>
+      </footer>
+    </div>
+
+    <a class="floating-cta" href="mailto:samir@buzatu.it">start a brief</a>
+    <button class="scroll-top" type="button">top</button>
+    <div class="toast" aria-live="polite"></div>
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button">close</button>
+      <img class="lightbox-image" alt="expanded photograph" />
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="../../script.js"></script>
+  </body>
+</html>
+

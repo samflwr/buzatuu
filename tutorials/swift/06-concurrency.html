@@ -1,0 +1,338 @@
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="me" href="https://www.linkedin.com/in/buzatu/" />
+    <link rel="me" href="https://www.instagram.com/xvmir/" />
+<title>buzatu — concurrency swift</title>
+    <meta name="description" content="async/await, actor e task isolate." />
+    <meta name="keywords" content="buzatu, samir buzatu, tutorial, programmazione, ai, cinema, fotografia, swift, actor, controllo, async, errori" />
+    <meta name="author" content="samir buzatu" />
+    <meta name="publisher" content="buzatu" />
+    <meta name="application-name" content="buzatu" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:site_name" content="buzatu" />
+    <meta property="og:title" content="buzatu — concurrency swift" />
+    <meta property="og:description" content="async/await, actor e task isolate." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://buzatu.it/tutorials/swift/06-concurrency" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="buzatu — concurrency swift" />
+    <meta name="twitter:description" content="async/await, actor e task isolate." />
+    <meta property="og:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:alt" content="buzatu cinematic systems studio" />
+    <meta name="twitter:image" content="https://buzatu.it/assets/og-default.svg" />
+    <meta name="twitter:image:alt" content="buzatu cinematic systems studio" />
+    <link rel="canonical" href="https://buzatu.it/tutorials/swift/06-concurrency" />
+    <link rel="icon" type="image/svg+xml" href="https://buzatu.it/assets/favicon.svg" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://buzatu.it/sitemap.xml" />
+    <link rel="alternate" hreflang="it" href="https://buzatu.it/tutorials/swift/06-concurrency" />
+    <link rel="alternate" hreflang="x-default" href="https://buzatu.it/tutorials/swift/06-concurrency" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "potentialAction": {"@type": "SearchAction", "target": "https://buzatu.it/tutorials/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "buzatu — concurrency swift", "description": "async/await, actor e task isolate.", "url": "https://buzatu.it/tutorials/swift/06-concurrency", "isPartOf": {"@type": "WebSite", "name": "buzatu", "url": "https://buzatu.it"}, "inLanguage": "it"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "concurrency swift", "description": "async/await, actor e task isolate.", "url": "https://buzatu.it/tutorials/swift/06-concurrency", "learningResourceType": "tutorial", "educationalLevel": "avanzato", "inLanguage": "it", "creator": {"@type": "Person", "name": "samir buzatu"}, "about": ["async/await", "actor e isolamento", "error handling", "controllo di flusso"], "keywords": "async/await, actor e isolamento, error handling, controllo di flusso", "educationalUse": "tutorial", "timeRequired": "PT35M", "isPartOf": {"@type": "CollectionPage", "name": "tutorial swift", "url": "https://buzatu.it/tutorials/swift/"}}</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "home", "item": "https://buzatu.it/"}, {"@type": "ListItem", "position": 2, "name": "tutorials", "item": "https://buzatu.it/tutorials/"}, {"@type": "ListItem", "position": 3, "name": "swift", "item": "https://buzatu.it/tutorials/swift/"}, {"@type": "ListItem", "position": 4, "name": "concurrency", "item": "https://buzatu.it/tutorials/swift/06-concurrency"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "buzatu", "url": "https://buzatu.it", "description": "cinematic systems studio tra ai, cinema e fotografia", "email": "samir@buzatu.it", "address": {"@type": "PostalAddress", "addressLocality": "catania", "addressCountry": "it"}, "founder": {"@type": "Person", "name": "samir buzatu"}}</script>
+</head>
+  <body>
+    <a class="skip-link" href="#main-content">skip to content</a>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-core">
+        <p class="preloader-title">buzatu systems initializing</p>
+        <div class="preloader-bar"><span></span></div>
+        <div class="preloader-meta">
+          <span class="preloader-count" aria-live="polite">0%</span>
+          <span class="preloader-status">calibrating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="transition-layer" aria-hidden="true"></div>
+    <div class="ambient"></div>
+    <div class="scroll-progress"><span></span></div>
+
+    <div data-barba="wrapper">
+
+      <header class="site-header">
+        <a class="brand" href="../../" aria-label="buzatu home">
+          <span class="brand-mark">b</span>
+          <span class="brand-word">buzatu</span>
+        </a>
+        <nav class="site-nav" aria-label="primary">
+          <a class="nav-link" href="../../" data-nav="home">home</a>
+          <a class="nav-link" href="../../work" data-nav="work">work</a>
+          <a class="nav-link" href="../../photography" data-nav="photography">photography</a>
+          <a class="nav-link" href="../" data-nav="tutorials">tutorials</a>
+          <a class="nav-link" href="../../about" data-nav="about">about</a>
+        </nav>
+        <div class="nav-controls">
+          <span class="status-pill">availability: limited select briefs</span>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+          <div class="nav-overlay-top">
+            <p class="nav-overlay-label">menu</p>
+            <button class="nav-close" type="button">close</button>
+          </div>
+          <nav class="nav-overlay-links">
+            <a href="../../" data-nav="home">home</a>
+            <a href="../../work" data-nav="work">work</a>
+            <a href="../../photography" data-nav="photography">photography</a>
+            <a href="../" data-nav="tutorials">tutorials</a>
+            <a href="../../about" data-nav="about">about</a>
+          </nav>
+          <div class="nav-overlay-footer">
+            <p class="nav-overlay-text">samir@buzatu.it</p>
+            <div class="nav-overlay-meta">
+              <span>catania, italy</span>
+              <span>cinematic systems · ai · vfx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main data-barba="container" data-barba-namespace="swift-06-concurrency" class="page" id="main-content">
+        <section class="page-hero tutorial-hero">
+          <nav class="breadcrumbs" data-animate="reveal">
+            <a href="../">tutorials</a>
+            <a href="/">swift</a>
+            <span>concurrency</span>
+          </nav>
+          <p class="eyebrow" data-animate="reveal">lezione 06</p>
+          <h1 class="page-title" data-animate="reveal">concurrency</h1>
+          <p class="page-sub" data-animate="reveal">async/await, actor e task isolate.</p>
+          <div class="tutorial-tags" data-animate="reveal">
+            <span class="tag">livello: avanzato</span>
+            <span class="tag">durata: 35 min</span>
+            <span class="tag">output: task concorrenti</span>
+            <span class="tag">badge: swift essentials</span>
+</div>
+        </section>
+
+        <section class="tutorial-layout">
+          <aside class="tutorial-aside" data-animate="reveal">
+            <h3>indice</h3>
+            <ul class="toc">
+              <li><a href="#async">async/await</a></li>
+              <li><a href="#actor">actor e isolamento</a></li>
+              <li><a href="#errori">error handling</a></li>
+              <li><a href="#controllo">controllo di flusso</a></li>
+
+              <li><a href="#exercise">esercizi</a></li>
+              <li><a href="#panoramica">panoramica</a></li>
+              <li><a href="#obiettivi">obiettivi</a></li>
+              <li><a href="#scheda-rapida">scheda rapida</a></li>
+              <li><a href="#tips">tips</a></li>
+              <li><a href="#mini-progetto">mini progetto</a></li>
+              <li><a href="#checklist">checklist</a></li>
+            </ul>
+          </aside>
+
+          <article class="tutorial-article">
+
+            <section id="async" data-animate="reveal">
+              <h2>async/await</h2>
+              <pre class="code-block"><code class="language-swift">func fetchTitle() async -&gt; String { &quot;swift&quot; }
+Task {
+  let title = await fetchTitle()
+  print(title)
+}</code></pre>
+              
+            </section>
+
+            <section id="actor" data-animate="reveal">
+              <h2>actor e isolamento</h2>
+              <pre class="code-block"><code class="language-swift">actor Counter {
+  private var value = 0
+  func inc() { value += 1 }
+  func get() -&gt; Int { value }
+}</code></pre>
+              
+            </section>
+
+            <section id="errori" data-animate="reveal">
+              <h2>error handling</h2>
+              <pre class="code-block"><code class="language-swift">enum LoadError: Error { case missing }
+func load(_ ok: Bool) throws -&gt; String {
+  if !ok { throw LoadError.missing }
+  return &quot;ok&quot;
+}</code></pre>
+              
+            </section>
+
+            <section id="controllo" data-animate="reveal">
+              <h2>controllo di flusso</h2>
+              <pre class="code-block"><code class="language-swift">let level = 2
+switch level {
+case 1: print(&quot;base&quot;)
+case 2: print(&quot;intermedio&quot;)
+default: print(&quot;avanzato&quot;)
+}</code></pre>
+              
+            </section>
+
+            <section id="exercise" data-animate="reveal">
+              <h2>esercizi</h2>
+              <p>definisci una funzione async e consuma il risultato.</p>
+              <pre class="code-block"><code class="language-swift">func load() async -&gt; [String] { [&quot;A&quot;, &quot;B&quot;] }
+Task {
+  let items = await load()
+  print(items.count)
+}</code></pre>
+            </section>
+          
+            <section id="panoramica" data-animate="reveal">
+              <h2>panoramica</h2>
+              <p>In questo capitolo su concurrency lavoriamo su async/await, actor e isolamento, error handling, controllo di flusso per creare micro-pattern riutilizzabili.</p>
+              <p>lavora in sequenza: leggi, prova, modifica gli snippet e annota i trade-off principali.</p>
+              <div class="callout">
+                <p>badge: swift essentials</p>
+              </div>
+            </section>
+
+            <section id="obiettivi" data-animate="reveal">
+              <h2>obiettivi</h2>
+              <ul class="bullet-list">
+                <li>capire e applicare async/await in uno scenario reale</li>
+                <li>capire e applicare actor e isolamento in uno scenario reale</li>
+                <li>capire e applicare error handling in uno scenario reale</li>
+                <li>capire e applicare controllo di flusso in uno scenario reale</li>
+              </ul>
+            </section>
+
+            <section id="scheda-rapida" data-animate="reveal">
+              <h2>scheda rapida</h2>
+              <pre class="code-block"><code class="language-swift">func fetchTitle() async -&gt; String { &quot;swift&quot; }
+Task {
+  let title = await fetchTitle()
+  print(title)
+}</code></pre>
+              <p>adatta questo scheletro agli esempi della lezione.</p>
+            </section>
+
+            <section id="tips" data-animate="reveal">
+              <h2>tips</h2>
+              <ul class="bullet-list">
+                <li>preferisci value types quando possibile</li>
+                <li>usa guard per early exit</li>
+                <li>mantieni le view leggere</li>
+                <li>separa networking e ui</li>
+                <li>scrivi test su logica critica</li>
+                <li>gestisci timeout e cancellazioni</li>
+              </ul>
+              <div class="callout">
+                <p>tip: documenta ogni scelta architetturale.</p>
+              </div>
+            </section>
+
+            <section id="mini-progetto" data-animate="reveal">
+              <h2>mini progetto</h2>
+              <p>crea un loader async con Task e gestione errori.</p>
+              <ul class="bullet-list">
+                <li>scrivi funzione async</li>
+                <li>avvia Task</li>
+                <li>mostra risultato</li>
+              </ul>
+              <p>output atteso: task completato.</p>
+            </section>
+
+            <section id="checklist" data-animate="reveal">
+              <h2>checklist</h2>
+              <ul class="bullet-list">
+                <li>ho eseguito gli snippet e controllato l'output</li>
+                <li>ho annotato almeno 2 trade-off</li>
+                <li>ho completato il mini progetto</li>
+                <li>ho salvato un riepilogo personale</li>
+              </ul>
+            </section>
+          </article>
+        </section>
+      </main>
+
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-logo">buzatu</span>
+            <p class="footer-copy">cinematic systems studio blending ai, film, and art practice.</p>
+            <div class="footer-badges">
+              <span>ai</span>
+              <span>vfx</span>
+              <span>photography</span>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>navigate</h4>
+            <a href="../../">home</a>
+            <a href="../../work">work</a>
+            <a href="../../photography">photography</a>
+            <a href="../">tutorials</a>
+            <a href="../../about">about</a>
+          </div>
+          <div class="footer-col">
+            <h4>studio</h4>
+            <p>catania, italy</p>
+            <p>samir@buzatu.it</p>
+          </div>
+          <div class="footer-col">
+            <h4>signals</h4>
+            <p>subscribe for new drops and private previews.</p>
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="email" required />
+              <button type="submit">join</button>
+            </form>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/in/buzatu/" rel="me">linkedin</a>
+              <a href="https://www.instagram.com/xvmir/" rel="me">instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 buzatu</span>
+          <span>crafted in catania · cinematic dark mode</span>
+        </div>
+      </footer>
+    </div>
+
+    <a class="floating-cta" href="mailto:samir@buzatu.it">start a brief</a>
+    <button class="scroll-top" type="button">top</button>
+    <div class="toast" aria-live="polite"></div>
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button">close</button>
+      <img class="lightbox-image" alt="expanded photograph" />
+      <p class="lightbox-caption"></p>
+    </div>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="../../script.js"></script>
+  </body>
+</html>
+
