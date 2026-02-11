@@ -200,13 +200,19 @@
       overlay.setAttribute("aria-hidden", "true");
     };
 
-    toggle.addEventListener("click", () => {
+    const handleToggle = (event) => {
+      if (event && event.type === "touchstart") {
+        event.preventDefault();
+      }
       if (body.classList.contains("nav-open")) {
         closeNav();
       } else {
         openNav();
       }
-    });
+    };
+
+    toggle.addEventListener("click", handleToggle);
+    toggle.addEventListener("touchstart", handleToggle, { passive: false });
 
     if (closeBtn) {
       closeBtn.addEventListener("click", closeNav);

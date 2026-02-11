@@ -462,10 +462,12 @@ body.is-loading .preloader {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: linear-gradient(150deg, rgba(18, 18, 18, 0.9), rgba(8, 8, 8, 0.8));
   display: none;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
+  touch-action: manipulation;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   box-shadow: var(--shadow-soft);
 }
@@ -478,8 +480,9 @@ body.is-loading .preloader {
 
 .nav-toggle span {
   display: block;
-  width: 16px;
+  width: 18px;
   height: 2px;
+  border-radius: 999px;
   background: var(--white);
   transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
 }
@@ -2659,6 +2662,11 @@ pre[class*="language-"] {
     padding: 14px 18px;
   }
 
+  .nav-toggle {
+    width: 46px;
+    height: 46px;
+  }
+
   .site-nav {
     display: none;
   }
@@ -2667,8 +2675,36 @@ pre[class*="language-"] {
     display: inline-flex;
   }
 
+  .nav-overlay-inner {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 28px 22px;
+    gap: 22px;
+    grid-template-rows: auto 1fr auto;
+    overflow-y: auto;
+  }
+
+  .nav-overlay-links {
+    font-size: 1.8rem;
+  }
+
+  .nav-overlay-links a {
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .nav-overlay-footer {
+    margin-top: auto;
+  }
+
   .hero {
     min-height: auto;
+  }
+
+  .hero-panel {
+    padding: 24px;
   }
 
   .tile.large {
@@ -2718,11 +2754,97 @@ pre[class*="language-"] {
 
 @media (max-width: 640px) {
   .page {
-    padding: 120px 6vw 120px;
+    padding: 110px 6vw 110px;
+  }
+
+  .site-header {
+    top: 12px;
+    left: 4vw;
+    right: 4vw;
+    padding: 10px 14px;
+    border-radius: 22px;
+  }
+
+  .brand {
+    font-size: 0.9rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
+  }
+
+  .hero-sub,
+  body.home .hero-sub {
+    font-size: 0.98rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   .hero-metrics {
     flex-direction: column;
+    gap: 12px;
+  }
+
+  .metric {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .section {
+    margin-top: 90px;
+  }
+
+  .section-head {
+    margin-bottom: 24px;
+  }
+
+  .page-hero {
+    padding-top: 48px;
+  }
+
+  .page-title {
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+  }
+
+  .page-sub {
+    font-size: 0.95rem;
+  }
+
+  .panel,
+  .hero-panel,
+  .tile,
+  .matrix-card,
+  .project-card,
+  .work-card,
+  .series-card {
+    padding: 20px;
+  }
+
+  .work-card {
+    min-height: auto;
+  }
+
+  .gallery {
+    grid-auto-rows: 140px;
+    gap: 14px;
+  }
+
+  .gallery-item figcaption {
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .nav-overlay-links {
+    font-size: 1.6rem;
   }
 
   .profile-data div {
@@ -2745,6 +2867,14 @@ pre[class*="language-"] {
 
   .nav-overlay-meta {
     flex-direction: column;
+  }
+
+  .footer-grid {
+    gap: 18px;
+  }
+
+  .site-footer {
+    padding: 50px 6vw 36px;
   }
 
   .search-input {
