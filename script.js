@@ -367,9 +367,16 @@
     let index;
     let activeFilter = "all";
     const languageLabel = {
+      c: "c",
       cpp: "c++",
+      csharp: "c#",
       java: "java",
+      javascript: "javascript",
+      kotlin: "kotlin",
       python: "python",
+      rust: "rust",
+      swift: "swift",
+      typescript: "typescript",
       sql: "sql",
     };
     const allowedFilters = new Set(["all", ...Object.keys(languageLabel)]);
